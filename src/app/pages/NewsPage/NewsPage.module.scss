@@ -1,0 +1,48 @@
+.company_banner {
+    // background: #f1f9fd;
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #999999;
+}
+
+.product_name {
+    font-size: 18px;
+    color: #1A1A1A;
+    font-weight: 500;
+    padding: 10px 0;
+
+  }
+  .product_content-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .product_content-item {
+    list-style: none;
+    font-weight: 600;
+    margin-right: 7px;
+  }
+  button {
+    border: none;
+    border-radius: 100px;
+  }
+  button:hover {
+    cursor: pointer;
+  }
+  a {
+    text-decoration: none;
+    color: #333333;
+  }
+  .border_product {
+    position: relative;
+  }
+  .border_product:hover {
+  }
+  .discount_like {
+    position: absolute;
+    top: 3%;
+    right: 3%;
+  }

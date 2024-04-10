@@ -1,0 +1,37 @@
+[
+    {
+        "id": "12",
+        "name": "Tẩy trang Bioderma Solution Micellaire Purifying",
+        "price": "730.000đ",
+        "image": "https://i.postimg.cc/PfDXP0cX/Rectangle-85.png",
+        "category": "1"
+    },
+    {
+        "id": "22",
+        "name": "Nước Tẩy Trang Innisfree Green Tea Purifying",
+        "price": "465.000đ",
+        "image": "https://i.postimg.cc/8C3GCbmf/Rectangle-85-1.png",
+        "category": "1"
+    },
+    {
+        "id": "23",
+        "name": "Nước Tẩy Trang PrettySkin The Pure Purifying",
+        "price": "580.000đ",
+        "image": "https://i.postimg.cc/zDTNJKb3/Rectangle-85-2.png",
+        "category": "1"
+    },
+    {
+        "id": "25",
+        "name": "Nước Tẩy Trang SVR Sebiaclear Purifying Purifying",
+        "price": "440.000đ",
+        "image": "https://i.postimg.cc/tC5H6bzj/Rectangle-85-3.png",
+        "category": "1"
+    },
+    {
+        "id": "26",
+        "name": "Nước Tẩy Trang Bí Đao Cocoon Winterl Purifying",
+        "price": "440.000đ",
+        "image": "https://i.postimg.cc/7YLKBykD/Rectangle-85-4.png",
+        "category": "1"
+    }
+]

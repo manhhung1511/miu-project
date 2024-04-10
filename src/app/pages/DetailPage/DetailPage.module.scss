@@ -1,0 +1,174 @@
+.detail_img {
+  border: 1px solid #999999;
+}
+.detail_top {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #9999;
+}
+.detail_title {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+.detail_status {
+  padding: 10px 4px;
+  background: #FDABD2;
+  width: 10%;
+  border-radius: 7px;
+  color: #FA58A6;
+  margin-bottom: 10px;
+
+}
+.detail_star {
+
+  span {
+    margin-left: 10px;
+    font-size: 18px;
+  }
+}
+.detail_bottom-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 0;
+}
+
+.detail_bottom-branch {
+  span {
+    color: black;
+    font-weight: 600;
+  }
+}
+
+.detail_bottom-share {
+  span {
+    color: black;
+    font-weight: 600;
+  }
+}
+
+.detail_button-desc {
+  margin: 0 11px;
+}
+
+.detail_button-incre {
+  margin: 0 11px;
+}
+.button_add {
+  margin-left: 35px;
+}
+.detail_button {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #9999;
+}
+.detail_price {
+  color: #F50779;
+  font-size: 32px;
+}
+.detail_bottom {
+  padding: 10px 0;
+  border-bottom: 1px solid #9999;
+
+}
+
+.detail_type {
+  padding: 20px 0;
+  font-size: 18px;
+}
+
+.infor_item {
+  list-style: none;
+  display: flex;
+}
+.infor_icon {
+  margin-right: 5px;
+}
+h3 {
+  font-size: 30px;
+}
+
+.comment_about {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+.comment_persion {
+  display: flex;
+
+}
+.comment_persion-content {
+  margin-left: 5px;
+}
+.comment {
+  padding: 20px 0;
+  border-bottom: 1px solid #9999;
+}
+
+img {
+  max-width: 100%;
+}
+.product_content {
+
+}
+.product_name {
+  font-size: 14px;
+}
+.product_content-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.product_content-item {
+  list-style: none;
+  font-weight: 600;
+  margin-right: 7px;
+}
+button {
+  border: none;
+  border-radius: 100px;
+}
+button:hover {
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  color: #333333;
+}
+.border_product {
+  border: 1px solid #3333;
+}
+.border_product:hover {
+  border: 1px solid #FA58A6;
+}
+.product_connect {
+  width: 50%;
+  margin: 0 auto;
+  border: 1px solid;
+  padding: 20px;
+}
+.product_connect-title {
+  margin: 0 auto;
+
+}
+p {
+  color: #1A1A1A;
+}
+.detail_icon {
+  padding: 0 20px;
+}
+
+@media screen and (max-width: 565px)  {
+  .detail_title {
+    font-size: 17px;
+  }
+  .detail_status {
+    width: 22%;
+  }
+  .detail_price {
+    font-size: 20px;
+  }
+  .detail_icon {
+    padding: 0 5px;
+  }
+}

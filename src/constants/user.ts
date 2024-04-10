@@ -1,0 +1,8 @@
+const PERMISSIONS = {
+  ALL: "ALL",
+  TEACHER: "TEACHER",
+  ADMIN: "ADMIN",
+  STUDENT: "STUDENT",
+};
+
+export default PERMISSIONS;

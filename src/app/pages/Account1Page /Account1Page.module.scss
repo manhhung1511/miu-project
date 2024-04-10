@@ -1,0 +1,25 @@
+.input_form {
+    display: grid;
+    padding: 2px 0;
+    input, textarea {
+      padding: 12px 15px;
+        border-radius: 10px;
+        border: 1px solid #9999;
+        outline: none;
+    }
+  }
+  
+  label {
+    margin-bottom: 6px;
+  }
+
+  .order_button {
+    padding: 10px 25px !important;
+      border-radius: 20px !important;
+      margin-top: 20px !important;
+      font-weight: 700 !important;
+  }
+
+  .layout_footer {
+    padding-top: 4px !important;
+  }

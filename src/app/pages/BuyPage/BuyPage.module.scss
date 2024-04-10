@@ -1,0 +1,43 @@
+.input_form {
+  display: grid;
+  input, textarea {
+    padding: 12px 15px;
+      border-radius: 10px;
+      border: 1px solid #9999;
+      outline: none;
+  }
+}
+
+label {
+  margin-bottom: 6px;
+}
+.summary_comment {
+  display: grid;
+}
+
+.order1_child {
+  display: flex;
+}
+.order2,
+.order3,
+.order4,
+.total {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.order1_price-total {
+  font-size: 20px;
+  font-weight: 600;
+}
+.order_button {
+  padding: 10px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.payment_title {
+  margin-top: 10px;
+  font-size: 22px;
+}

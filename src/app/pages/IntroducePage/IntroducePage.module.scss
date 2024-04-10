@@ -1,0 +1,22 @@
+.introduct_title {
+  font-size: 42px;
+}
+.introduct_desc {
+  margin-top: 20px;
+  color: #666666;
+}
+.introduct_desc-list {
+  margin-top: 40px;
+}
+.introduct_desc-item {
+  list-style: none;
+  color:#666666;
+  padding: 10px 0;
+}
+
+@media screen and (max-width: 600px) {
+  .introduct_title {
+    font-size: 22px;
+  }
+  
+}

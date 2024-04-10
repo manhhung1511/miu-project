@@ -1,0 +1,51 @@
+[
+    {
+        "id": "12",
+        "image": "https://i.postimg.cc/nLNZTgQw/Image-8.png",
+        "name": "Tẩy trang Bioderma Solution Micellaire",
+        "price": "320.000đ",
+        "number": "52",
+        "type": "500ml",
+        "discount": "0%",
+        "status": "Tẩy trang"
+    },
+    {
+        "id": "12",
+        "image": "https://i.postimg.cc/13K3cwwV/Image-9.png",
+        "name": "Sữa rửa mặt Bioderma Solution Micellaire",
+        "price": "320.000đ",
+        "number": "52",
+        "type": "500ml",
+        "discount": "0%",
+        "status": "Sữa rửa mặt"
+    }
+    ,
+    {
+        "id": "12",
+        "image": "https://i.postimg.cc/zGw4ykW6/Image-10.png",
+        "name": "Toner Bioderma Solution Micellaire",
+        "price": "320.000đ",
+        "number": "52",
+        "type": "500ml",
+        "discount": "0%",
+        "status": "Toner"
+    },
+    {
+        "id": "12",
+        "image": "https://i.postimg.cc/nLNZTgQw/Image-8.png",
+        "name": "Tẩy trang Bioderma Solution Micellaire",
+        "price": "320.000đ",
+        "number": "52",
+        "type": "500ml",
+        "discount": "0%"
+    },
+    {
+        "id": "12",
+        "image": "https://i.postimg.cc/nLNZTgQw/Image-8.png",
+        "name": "Tẩy trang Bioderma Solution Micellaire",
+        "price": "320.000đ",
+        "number": "52",
+        "type": "500ml",
+        "discount": "0%"
+    }
+]
