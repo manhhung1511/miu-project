@@ -1,6 +1,6 @@
 import classNames from "classnames/bind";
 
-import { Box, Typography } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 
 import Banner from "core/app/components/Banner";
 import Discount from "core/app/components/Discount";
@@ -19,26 +19,30 @@ export const HomePage = () => {
       }}
     >
       <div className={cx("banner_main")}>
-        <Banner />
+        <Container maxWidth="lg">
+          <Banner />
+        </Container>
       </div>
-      <Box
-        sx={{
-          marginTop: { xs: "20px", sm: "50px" },
-        }}
-      >
-        <Typography
-          variant="h3"
-          style={{
-            textAlign: "center",
-            padding: "40px 0",
-            fontWeight: "600",
+      <Container maxWidth="lg">
+        <Box
+          sx={{
+            marginTop: { xs: "20px", sm: "50px" },
           }}
-          sx={{ fontSize: { sm: "40px", xs: "20px" } }}
         >
-          Sản Phẩm Bán Chạy
-        </Typography>
-        <Product />
-      </Box>
+          <Typography
+            variant="h3"
+            style={{
+              textAlign: "center",
+              padding: "40px 0",
+              fontWeight: "600",
+            }}
+            sx={{ fontSize: { sm: "40px", xs: "20px" } }}
+          >
+            Sản Phẩm Bán Chạy
+          </Typography>
+          <Product />
+        </Box>
+      </Container>
 
       <Box
         sx={{
