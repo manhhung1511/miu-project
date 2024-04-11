@@ -529,7 +529,7 @@ function Header() {
                           color: "#FFF",
                           position: "absolute",
                           top: "14%",
-                          left: "91%",
+                          left: "87%",
                           borderRadius: "20px",
                           textAlign: "center",
                         }}
@@ -545,7 +545,7 @@ function Header() {
             <Box
               sx={{
                 display: { xs: "none", sm: "flex" },
-                padding: "21px 4px 9px 4px",
+                padding: "21px 4px 9px 0px",
                 justifyContent: "space-between",
               }}
             >

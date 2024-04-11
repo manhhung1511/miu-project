@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import * as Yup from "yup";
-import ButtonForm from './Button';
 
 import { Checkbox, FormControlLabel } from "@mui/material";
 import Box from "@mui/material/Box";
@@ -16,8 +15,8 @@ import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 
-
 import TextField from "../FormUI/TextField";
+import ButtonForm from "./Button";
 
 export default function Login() {
   const { t } = useTranslation();
@@ -25,8 +24,8 @@ export default function Login() {
 
   const navigateTo = useNavigate();
 
-  const handleSubmit = async(values) => {
-    localStorage.setItem("user", JSON.stringify(values));  
+  const handleSubmit = async values => {
+    localStorage.setItem("user", JSON.stringify(values));
     navigateTo("/", { replace: true });
   };
 
@@ -43,6 +42,12 @@ export default function Login() {
       .required(`${t("validate.required")}`)
       .min(8, `${t("validate.limit")}`),
   });
+
+  useEffect(() => {
+    localStorage.removeItem("user");
+    localStorage.removeItem("like");
+    localStorage.removeItem("cart");
+  }, []);
 
   return (
     <Formik
@@ -61,7 +66,11 @@ export default function Login() {
             component={Paper}
             elevation={6}
             square
-            sx={{ margin: "0 auto", marginTop: {sm: "55px", xs: "40px"}, maxWidth: {sm: "42.666667% !important"}}}
+            sx={{
+              margin: "0 auto",
+              marginTop: { sm: "55px", xs: "40px" },
+              maxWidth: { sm: "42.666667% !important" },
+            }}
           >
             <Box
               sx={{
@@ -81,7 +90,7 @@ export default function Login() {
               </Typography>
               <Box component="form" noValidate sx={{ mt: 3 }}>
                 <Grid container spacing={2}>
-                  <Grid item sm={12} sx={{ width: "100%"}}>
+                  <Grid item sm={12} sx={{ width: "100%" }}>
                     <TextField
                       type="email"
                       id="email"
@@ -89,7 +98,12 @@ export default function Login() {
                       name="email"
                     />
                   </Grid>
-                  <Grid item sm={12} className="passwordNew" sx={{ width: "100%"}}>
+                  <Grid
+                    item
+                    sm={12}
+                    className="passwordNew"
+                    sx={{ width: "100%" }}
+                  >
                     <TextField
                       name="password"
                       label={t("login.password")}
@@ -135,15 +149,19 @@ export default function Login() {
                 <Grid item xs={12}>
                   <ButtonForm>{t("login.button")}</ButtonForm>
                 </Grid>
-                <Grid container justifyContent="center" sx={{padding:"20px", color:"#99999"}}>
+                <Grid
+                  container
+                  justifyContent="center"
+                  sx={{ padding: "20px", color: "#99999" }}
+                >
                   <Grid item>
                     <Link to="/register" variant="body2">
                       {t("login.body2")}
                     </Link>
                     <div>
-                    <Link to="/admin/login" variant="body2">
-                      Đăng nhập Admin
-                    </Link>
+                      <Link to="/admin/login" variant="body2">
+                        Đăng nhập Admin
+                      </Link>
                     </div>
                   </Grid>
                 </Grid>
@@ -228,4 +246,5 @@ const Wrapper = styled.section`
     font-size: 14.5px;
     font-weight: 500;
     text-transform: uppercase;
-  }`;
+  }
+`;

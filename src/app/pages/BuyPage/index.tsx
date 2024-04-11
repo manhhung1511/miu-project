@@ -175,7 +175,7 @@ export default function BuyPage() {
           <Grid item sm={5}>
           <Typography variant="h3" sx={{fontSize: {sm: "24px", xs: "20px"}, fontWeight:'600', padding: '20px 0'}}>Đơn hàng</Typography>
 
-            <Container maxWidth="xl" sx={{ padding: "20px 0" }}>
+            <Container maxWidth="lg" sx={{ padding: "20px 0" }}>
             {
               cart?.map((item) => (
                 <Grid container spacing={2}>

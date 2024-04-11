@@ -53,7 +53,7 @@ export default function Discount() {
         discounts?.map((item) => (
           <Grid item xs={6} sm={2}>
           <div className="border_discount">
-          <Link to="">
+          <Link to={`/detail/${item.id}`}>
               <div className="discount_img">
                 <img src={item.image} alt="discount" />
               </div>
@@ -70,6 +70,7 @@ export default function Discount() {
               </div>
             </Link>
             <button  className="button_add-cart"
+                  style={{backgroundColor: "#FFF"}}
                   onClick={() => handleAddToCart({ ...item, number: "1" })}>
                       <svg
                         width="38"
@@ -111,7 +112,7 @@ const Wrapper = styled.div`
   }
   .discount_name {
     font-size: 14px;
-    margin-left: 2px;
+    margin-left: 4px;
   }
   .discount_content-list {
     display: flex;
@@ -150,5 +151,6 @@ const Wrapper = styled.div`
     position: absolute;
     bottom: 1%;
     right: 3%;
+    background-color: "#FFF";
   }
 `;

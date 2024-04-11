@@ -57,17 +57,19 @@ export default function IntroducePage() {
         // maxWidth: "45%"
       }}
     >
-      <Container
-        maxWidth="xl"
-        sx={{ background: "#FBD5E0",padding: {sm: "20px 0", xs: "5px 0" } }}
+     <Box
+        style={{ background: "#FBD5E0" }}
+        sx={{ padding: { sm: "20px 0", xs: "5px 0" } }}
       >
-        <Stack spacing={2}>
-          <Breadcrumbs separator="›" aria-label="breadcrumb">
-            {breadcrumbs}
-          </Breadcrumbs>
-        </Stack>
-      </Container>
-      <Container maxWidth="xl" sx={{ padding: "20px 8px" }}>
+        <Container maxWidth="lg">
+          <Stack spacing={2}>
+            <Breadcrumbs separator="›" aria-label="breadcrumb">
+              {breadcrumbs}
+            </Breadcrumbs>
+          </Stack>
+        </Container>
+      </Box>
+      <Container maxWidth="lg" sx={{ padding: "20px 8px" }}>
         <Grid container spacing={2}>
           <Grid item sm={6} sx={{ padding: {sm: "90px 90px 90px 20px", xs: "0"} }}>
             <h3 className={cx("introduct_title")}>
@@ -91,6 +93,8 @@ export default function IntroducePage() {
               />
             </div>
           </Grid>
+          </Grid>
+      </Container>
           <Grid item sm={12} xs={12} style={{ padding: "40px 0" }}>
             <div>
               <img
@@ -100,7 +104,9 @@ export default function IntroducePage() {
               />
             </div>
           </Grid>
-          <Grid item sm={6} sx={{ padding: {sm: "90px 90px 90px 20px", xs: "0"} }}>
+      <Container maxWidth="lg" sx={{ padding: "20px 8px" }}>
+        <Grid container spacing={2}>
+          <Grid item sm={6} sx={{ padding: {sm: "90px 90px 0px 20px", xs: "0"} }}>
             <div>
               <h3 className={cx("introduct_title")}>
                 Mang Lại Trải Nghiệm Hoàn Hảo, Không Ưu Tiên Lợi Nhuận
@@ -221,7 +227,7 @@ export default function IntroducePage() {
               </Button>
             </Link>
           </Grid>
-          <Grid item sm={6} xs={12} style={{ padding: "40px 0" }}>
+          <Grid item sm={6} xs={12} style={{ paddingTop: "40px" }}>
             <div>
               <img
                 style={{ width: "100%" }}

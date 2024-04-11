@@ -119,18 +119,20 @@ export default function CartPage() {
         // maxWidth: "45%"
       }}
     >
-      <Container
-        maxWidth="xl"
-        sx={{ background: "#FBD5E0", padding: { sm: "20px 0", xs: "5px 0" } }}
+       <Box
+        style={{ background: "#FBD5E0" }}
+        sx={{ padding: { sm: "20px 0", xs: "5px 0" } }}
       >
-        <Stack spacing={2}>
-          <Breadcrumbs separator="›" aria-label="breadcrumb">
-            {breadcrumbs}
-          </Breadcrumbs>
-        </Stack>
-      </Container>
+        <Container maxWidth="lg">
+          <Stack spacing={2}>
+            <Breadcrumbs separator="›" aria-label="breadcrumb">
+              {breadcrumbs}
+            </Breadcrumbs>
+          </Stack>
+        </Container>
+      </Box>
       <Container
-        maxWidth="xl"
+        maxWidth="lg"
         sx={{ padding: { sm: "40px 20px", xs: "20px 5px" } }}
       >
         <Typography

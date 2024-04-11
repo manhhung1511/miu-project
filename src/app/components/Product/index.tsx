@@ -8,6 +8,7 @@ import { Container, Grid } from "@mui/material";
 import { useCartStore } from "core/store/useCartStore";
 
 import products from "../../../datas/product.json";
+import categories from "../../../datas/categories.json";
 
 export default function Product() {
   interface propCart {
@@ -42,52 +43,57 @@ export default function Product() {
 
   return (
     <Wrapper>
-      <Container maxWidth="xl">
+      <Container maxWidth="lg">
         <Grid container spacing={2}>
-          {products?.map(item => (
-            <Grid item xs={6} sm={2.4}>
-              <div className="border_product">
-                <Link to={`/detail/${item.id}`}>
-                  <div className="product_img">
-                    <img src={item.image} alt="product" />
-                  </div>
-                  <div className="product_content">
-                    <p className="product_name">{item.name}</p>
-                    <ul className="product_content-list">
-                      <li className="product_content-item">{item.price}</li>
-                      <li className="product_content-item"></li>
-                    </ul>
-                  </div>
-                </Link>
-                <button
-                  className="button_add-cart"
-                  onClick={() => handleAddToCart({ ...item, number: "1" })}
-                >
-                  <svg
-                    width="38"
-                    height="38"
-                    viewBox="0 0 38 38"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle
-                      cx="18.7072"
-                      cy="18.7072"
-                      r="18.7072"
-                      fill="#F2F2F2"
-                    />
-                    <path
-                      d="M15.1667 16.8333H12.6667L11 26H26L24.3333 16.8333H21.8333M15.1667 16.8333V14.3333C15.1667 12.4924 16.6591 11 18.5 11V11C20.3409 11 21.8333 12.4924 21.8333 14.3333V16.8333M15.1667 16.8333H21.8333M15.1667 16.8333V19.3333M21.8333 16.8333V19.3333"
-                      stroke="#1A1A1A"
-                      stroke-width="1.3"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
-              </div>
-            </Grid>
-          ))}
+          {categories?.map(item => {
+              if(item.category == 10) {
+                return (
+                  <Grid item xs={6} sm={2.4}>
+                    <div className="border_product">
+                      <Link to={`/detail/${item.id}`}>
+                        <div className="product_img">
+                          <img src={item.image} alt="product" />
+                        </div>
+                        <div className="product_content">
+                          <p className="product_name">{item.name}</p>
+                          <ul className="product_content-list">
+                            <li className="product_content-item">{item.price}</li>
+                            <li className="product_content-item"></li>
+                          </ul>
+                        </div>
+                      </Link>
+                      <button
+                        className="button_add-cart"
+                        onClick={() => handleAddToCart({ ...item, number: "1" })}
+                        style={{backgroundColor: "#FFF"}}
+                      >
+                        <svg
+                          width="38"
+                          height="38"
+                          viewBox="0 0 38 38"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle
+                            cx="18.7072"
+                            cy="18.7072"
+                            r="18.7072"
+                            fill="#F2F2F2"
+                          />
+                          <path
+                            d="M15.1667 16.8333H12.6667L11 26H26L24.3333 16.8333H21.8333M15.1667 16.8333V14.3333C15.1667 12.4924 16.6591 11 18.5 11V11C20.3409 11 21.8333 12.4924 21.8333 14.3333V16.8333M15.1667 16.8333H21.8333M15.1667 16.8333V19.3333M21.8333 16.8333V19.3333"
+                            stroke="#1A1A1A"
+                            stroke-width="1.3"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </Grid>
+                )
+              }
+          })}
         </Grid>
       </Container>
     </Wrapper>
@@ -137,6 +143,7 @@ const Wrapper = styled.div`
     position: absolute;
     bottom: 1%;
     right: 3%;
+    background-color: "#FFF";
   }
 
   @media (max-width: 600px) {

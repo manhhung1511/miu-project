@@ -71,14 +71,14 @@ export default function Account1Page() {
         // maxWidth: "45%"
       }}
     >
-      <Container maxWidth="xl" sx={{ background: "#FBD5E0", padding: "5px 0" }}>
+      <Container maxWidth="lg" sx={{ background: "#FBD5E0", padding: "5px 0" }}>
         <Stack spacing={2}>
           <Breadcrumbs separator="›" aria-label="breadcrumb">
             {breadcrumbs}
           </Breadcrumbs>
         </Stack>
       </Container>
-      <Container maxWidth="xl" sx={{ padding: "10px 5px" }}>
+      <Container maxWidth="lg" sx={{ padding: "10px 5px" }}>
         {/* <h3 style={{ fontSize: "20px", marginBottom: "10px" }}>
           Thông tin tài khoản
         </h3> */}

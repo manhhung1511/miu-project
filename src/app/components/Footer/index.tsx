@@ -302,10 +302,10 @@ const Footer = () => {
                 <div className={cx("footer_main")}>
                   <h4>Tải về ứng dụng</h4>
 
-                  <div
-                    style={{ display: "flex", justifyContent: "space-between" }}
+                  <Box
+                    sx={{ display: {sm:"flex", xs: "grid"}, justifyContent: "space-between" }}
                   >
-                    <div style={{ display: "flex", color: "#7F7F7F" }}>
+                    <Box style={{ display: "flex", color: "#7F7F7F" }} sx={{padding: {xs: "20px 0px", sm: "0px"}}}>
                       <svg
                         width="24"
                         height="28"
@@ -318,8 +318,8 @@ const Footer = () => {
                           fill="white"
                         />
                       </svg>
-                      <p className={cx("text_p")}> App Store</p>
-                    </div>
+                      <p style={{marginLeft: "10px", color: "#FFF"}} className={cx("text_p")}> App Store</p>
+                    </Box>
                     <div style={{ display: "flex", color: "#7F7F7F" }}>
                       <svg
                         width="22"
@@ -333,9 +333,9 @@ const Footer = () => {
                           fill="white"
                         />
                       </svg>
-                      <p className={cx("text_p")}> Google play</p>
+                      <p style={{marginLeft: "10px", color: "#FFF"}} className={cx("text_p")}> Google play</p>
                     </div>
-                  </div>
+                  </Box>
                 </div>
               </Grid>
             </Grid>
@@ -405,6 +405,11 @@ const Footer = () => {
                     fill="#B3B3B3"
                   />
                 </svg>
+              </p>
+            </div>
+            <div className={cx("footer_bottom-center")}>
+              <p className={cx("text_p")}>
+              MiBeauty eCommerce     2024. All Rights Reserved
               </p>
             </div>
             <div className={cx("footer_bottom-right")}>

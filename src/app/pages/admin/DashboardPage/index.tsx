@@ -254,7 +254,7 @@ export default function DashboardPage() {
           <p style={{ fontWeight: "600", marginLeft: "10px" }}>Admin</p>
         </div>
       </Container>
-      <Container maxWidth="xl" sx={{ padding: "20px 0" }}>
+      <Container maxWidth="lg" sx={{ padding: "20px 0" }}>
         <Box
           sx={{
             flexGrow: 1,

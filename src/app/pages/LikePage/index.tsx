@@ -83,17 +83,19 @@ export default function LikePage() {
       // maxWidth: "45%"
     }}
   >
-      <Container
-        maxWidth="xl"
-        sx={{ background: "#FBD5E0", padding: {sm: "20px 0", xs: "5px 0"} }}
+      <Box
+        style={{ background: "#FBD5E0" }}
+        sx={{ padding: { sm: "20px 0", xs: "5px 0" } }}
       >
-        <Stack spacing={2}>
-          <Breadcrumbs separator="›" aria-label="breadcrumb">
-            {breadcrumbs}
-          </Breadcrumbs>
-        </Stack>
-      </Container>
-      <Container maxWidth="xl" sx={{ paddingTop: {sm: "40px", xs: "20px 5px" } }}>
+        <Container maxWidth="lg">
+          <Stack spacing={2}>
+            <Breadcrumbs separator="›" aria-label="breadcrumb">
+              {breadcrumbs}
+            </Breadcrumbs>
+          </Stack>
+        </Container>
+      </Box>
+      <Container maxWidth="lg" sx={{ paddingTop: {sm: "40px", xs: "20px 5px" } }}>
       <Typography variant="h3" sx={{fontSize: {sm: "24px", xs: "20px"}, fontWeight:'600', padding: '20px 0'}}> Danh sách yêu thích</Typography>
 
         {/* <h3 style={{ textAlign: "center", marginBottom: "40px" }}>

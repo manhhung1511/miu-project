@@ -177,17 +177,19 @@ export default function AccountPage() {
         // maxWidth: "45%"
       }}
     >
-      <Container
-        maxWidth="xl"
-        sx={{ background: "#FBD5E0", padding: "20px 0" }}
+      <Box
+        style={{ background: "#FBD5E0" }}
+        sx={{ padding: { sm: "20px 0", xs: "5px 0" } }}
       >
-        <Stack spacing={2}>
-          <Breadcrumbs separator="›" aria-label="breadcrumb">
-            {breadcrumbs}
-          </Breadcrumbs>
-        </Stack>
-      </Container>
-      <Container maxWidth="xl" sx={{ padding: "40px 0" }}>
+        <Container maxWidth="lg">
+          <Stack spacing={2}>
+            <Breadcrumbs separator="›" aria-label="breadcrumb">
+              {breadcrumbs}
+            </Breadcrumbs>
+          </Stack>
+        </Container>
+      </Box>
+      <Container maxWidth="lg" sx={{ padding: "40px 0" }}>
         <Box
           sx={{
             flexGrow: 1,
@@ -209,6 +211,7 @@ export default function AccountPage() {
                 left: 0,
                 backgroundColor: "#FA58A6",
               },
+              width: "235px"
             }}
           >
             <Tab
@@ -297,7 +300,7 @@ export default function AccountPage() {
               <Container maxWidth="xl">
                 <Grid
                   container
-                  spacing={2}
+                  spacing={1}
                   style={{
                     padding: "20px",
                     border: "1px solid #9999",
@@ -364,7 +367,7 @@ export default function AccountPage() {
                       <input type="text" />
                     </div>
 
-                    <Grid container spacing={2}>
+                    <Grid container spacing={1}>
                       <Grid item sm={6}>
                         <div className={cx("input_form")}>
                           <label>Tỉnh</label>
@@ -425,7 +428,7 @@ export default function AccountPage() {
             </h3>
 
             <TableContainer component={Paper}>
-              <Table sx={{ minWidth: 1100 }} aria-label="simple table">
+              <Table sx={{ minWidth: 850 }} aria-label="simple table">
                 <TableHead>
                   <TableRow>
                     <TableCell style={{ fontSize: "22px" }}>ID</TableCell>

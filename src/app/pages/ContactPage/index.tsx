@@ -58,30 +58,37 @@ export default function ContactPage() {
     </Typography>,
   ];
   return (
-    <Box  sx={{
-      marginTop: { sm: "110px", xs: "70px" },
-      paddingTop: { sm: "78px", xs: "10px" },
-      // maxWidth: "45%"
-    }}>
-      <Container
-        maxWidth="xl"
-        sx={{ background: "#FBD5E0", padding: {sm: "20px 0", xs: "4px 0"} }}
+    <Box
+      sx={{
+        marginTop: { sm: "110px", xs: "70px" },
+        paddingTop: { sm: "78px", xs: "10px" },
+        // maxWidth: "45%"
+      }}
+    >
+      <Box
+        style={{ background: "#FBD5E0" }}
+        sx={{ padding: { sm: "20px 0", xs: "5px 0" } }}
       >
-        <Stack spacing={2}>
-          <Breadcrumbs separator="›" aria-label="breadcrumb">
-            {breadcrumbs}
-          </Breadcrumbs>
-        </Stack>
-      </Container>
-      <Container maxWidth="xl" sx={{ padding: "20px 0", marginTop: "20px", display: {sm: 'flex', xs: 'none'} }}>
-        <Grid container spacing={4}>
+        <Container maxWidth="lg">
+          <Stack spacing={2}>
+            <Breadcrumbs separator="›" aria-label="breadcrumb">
+              {breadcrumbs}
+            </Breadcrumbs>
+          </Stack>
+        </Container>
+      </Box>
+      <Container
+        maxWidth="lg"
+        sx={{
+          // padding: "20px",
+          marginTop: "20px",
+          display: { sm: "flex", xs: "none" },
+        }}
+      >
+        <Grid container spacing={3}>
           <Grid
             item
-            sm={3}
-            style={{
-              boxShadow:
-                "0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12)",
-            }}
+            lg={3}
           >
             <div className={cx("contact_address")}>
               <p className={cx("contact_address-item")}>
@@ -203,10 +210,10 @@ export default function ContactPage() {
               <p className={cx("contact_address-item")}> (+84) 903 499 519</p>
             </div>
           </Grid>
-          <Grid item sm={9} >
+          <Grid item lg={9}>
             <form>
               <h3>MiBeauty xin chào,</h3>
-              <p style={{padding: "20px 0"}}>
+              <p style={{ padding: "20px 0" }}>
                 Nếu có bất kỳ thắc mắc nào về sản phẩm hoặc trang web, hãy liên
                 hệ với chúng tôi để được giải đáp và tư vấn kịp thời. Chúng tôi
                 sẽ phản hồi lại trong thời gian sớm nhất.
@@ -252,24 +259,34 @@ export default function ContactPage() {
                       width: "100%",
                       marginTop: "30px",
                       outline: "none",
-                      borderColor: "#9999"
+                      borderColor: "#9999",
                     }}
-                  > </textarea>
+                  >
+                    {" "}
+                  </textarea>
 
-<Button className={cx("order_button")}>Gửi<span></span></Button>
-
+                  <Button className={cx("order_button")}>
+                    Gửi<span></span>
+                  </Button>
                 </Grid>
               </Grid>
             </form>
           </Grid>
         </Grid>
       </Container>
-      <Container maxWidth="xl" sx={{ padding: "10px 4px", marginTop: "20px", display: {sm: 'none', xs: 'flex'} }}>
+      <Container
+        maxWidth="lg"
+        sx={{
+          padding: "10px 4px",
+          marginTop: "20px",
+          display: { sm: "none", xs: "flex" },
+        }}
+      >
         <Grid container spacing={4}>
-        <Grid item xs={12} sx={{marginBottom: "20px"}}>
+          <Grid item xs={12} sx={{ marginBottom: "20px" }}>
             <form>
               <h3>MiBeauty xin chào,</h3>
-              <p style={{padding: "20px 0"}}>
+              <p style={{ padding: "20px 0" }}>
                 Nếu có bất kỳ thắc mắc nào về sản phẩm hoặc trang web, hãy liên
                 hệ với chúng tôi để được giải đáp và tư vấn kịp thời. Chúng tôi
                 sẽ phản hồi lại trong thời gian sớm nhất.
@@ -315,12 +332,15 @@ export default function ContactPage() {
                       width: "100%",
                       marginTop: "30px",
                       outline: "none",
-                      borderColor: "#9999"
+                      borderColor: "#9999",
                     }}
-                  > </textarea>
+                  >
+                    {" "}
+                  </textarea>
 
-<Button className={cx("order_button")}>Gửi<span></span></Button>
-
+                  <Button className={cx("order_button")}>
+                    Gửi<span></span>
+                  </Button>
                 </Grid>
               </Grid>
             </form>

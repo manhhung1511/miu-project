@@ -93,17 +93,19 @@ export default function DetailPage() {
         paddingTop: { sm: "78px", xs: "10px" },
       }}
     >
-      <Container
-        maxWidth="xl"
-        sx={{ background: "#FBD5E0", padding: { sm: "20px 0", xs: "5px 0" } }}
+       <Box
+        style={{ background: "#FBD5E0" }}
+        sx={{ padding: { sm: "20px 0", xs: "5px 0" } }}
       >
-        <Stack spacing={2}>
-          <Breadcrumbs separator="›" aria-label="breadcrumb">
-            {breadcrumbs}
-          </Breadcrumbs>
-        </Stack>
-      </Container>
-      <Container maxWidth="xl" sx={{ padding: "20px 5px" }}>
+        <Container maxWidth="lg">
+          <Stack spacing={2}>
+            <Breadcrumbs separator="›" aria-label="breadcrumb">
+              {breadcrumbs}
+            </Breadcrumbs>
+          </Stack>
+        </Container>
+      </Box>
+      <Container maxWidth="lg" sx={{ padding: "20px 5px" }}>
         <Grid container spacing={2}>
           {categories?.map((item, index) => {
             if (item.id === id) {
@@ -387,7 +389,7 @@ export default function DetailPage() {
         </Grid>
       </Container>
 
-      <Container maxWidth="xl" sx={{ padding: "0 5px" }}>
+      <Container maxWidth="lg" sx={{ padding: "0 5px" }}>
         <Grid container spacing={{ sm: 5, xs: 1 }}>
           <Grid item sm={7} xs={12}>
             <Typography
@@ -397,7 +399,7 @@ export default function DetailPage() {
               }}
               sx={{
                 borderBottom: { sm: "3px solid #FA58A6", xs: "1px solid #FFF" },
-                fontSize: { xs: "20px", sm: "30px" },
+                fontSize: { xs: "20px", sm: "25px" },
                 width: { xs: "100%", sm: "44%" },
                 fontWeight: "600",
               }}
@@ -576,7 +578,7 @@ export default function DetailPage() {
               }}
               sx={{
                 borderBottom: { sm: "3px solid #FA58A6", xs: "1px solid #FFF" },
-                fontSize: { xs: "20px", sm: "30px" },
+                fontSize: { xs: "20px", sm: "25px" },
                 width: { xs: "100%", sm: "40%" },
                 fontWeight: "600",
               }}
@@ -883,7 +885,7 @@ export default function DetailPage() {
                     sm: "3px solid #FA58A6",
                     xs: "1px solid #FFF",
                   },
-                  fontSize: { xs: "20px", sm: "30px" },
+                  fontSize: { xs: "20px", sm: "25px" },
                   width: { xs: "100%", sm: "20%" },
                   fontWeight: "600",
                   margin: { sm: "40px 0", xs: "20px 0" },
@@ -1039,7 +1041,7 @@ export default function DetailPage() {
               style={{}}
               sx={{
                 borderBottom: { sm: "3px solid #FA58A6", xs: "1px solid #FFF" },
-                fontSize: { xs: "20px", sm: "30px" },
+                fontSize: { xs: "20px", sm: "25px" },
                 width: { xs: "100%", sm: "63%" },
                 fontWeight: "600",
                 margin: { sm: "40px 0", xs: "20px 0" },

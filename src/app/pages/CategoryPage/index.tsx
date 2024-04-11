@@ -1,6 +1,7 @@
 import classNames from "classnames/bind";
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useShallow } from "zustand/react/shallow";
 
 import {
   Box,
@@ -19,10 +20,10 @@ import MenuItem from "@mui/material/MenuItem";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import Typography from "@mui/material/Typography";
 
+import { useCartStore } from "core/store/useCartStore";
+
 import categories from "../../../datas/categories.json";
 import styles from "./CategoryPage.module.scss";
-import { useCartStore } from "core/store/useCartStore";
-import { useShallow } from "zustand/react/shallow";
 
 const cx = classNames.bind(styles);
 
@@ -106,7 +107,6 @@ export default function CategoryPage() {
     }
   }
 
-
   const { cart, handleCart } = useCartStore(
     useShallow(state => ({
       cart: state.cart,
@@ -144,17 +144,19 @@ export default function CategoryPage() {
         // maxWidth: "45%"
       }}
     >
-      <Container
-        maxWidth="xl"
-        sx={{ background: "#FBD5E0", padding: { sm: "20px 0", xs: "5px 0" } }}
+      <Box
+        style={{ background: "#FBD5E0" }}
+        sx={{ padding: { sm: "20px 0", xs: "5px 0" } }}
       >
-        <Stack spacing={2}>
-          <Breadcrumbs separator="›" aria-label="breadcrumb">
-            {breadcrumbs}
-          </Breadcrumbs>
-        </Stack>
-      </Container>
-      <Container maxWidth="xl" sx={{ padding: "20px 4px" }}>
+        <Container maxWidth="lg">
+          <Stack spacing={2}>
+            <Breadcrumbs separator="›" aria-label="breadcrumb">
+              {breadcrumbs}
+            </Breadcrumbs>
+          </Stack>
+        </Container>
+      </Box>
+      <Container maxWidth="lg" sx={{ padding: "20px 4px" }}>
         <Grid container spacing={{ sm: 2, xs: 1 }}>
           <Grid item sm={3}>
             <Button
@@ -377,7 +379,7 @@ export default function CategoryPage() {
                             </div>
                             <div className={cx("product_content")}>
                               <p
-                                style={{ marginLeft: "5px" }}
+                                style={{ marginLeft: "5px", fontSize: "13px"}}
                                 className="product_name"
                               >
                                 {item?.name}
@@ -389,36 +391,40 @@ export default function CategoryPage() {
                                 >
                                   {item?.price}
                                 </li>
-                                <li className={cx("product_content-item")}>
-                                
-                                </li>
+                                <li className={cx("product_content-item")}></li>
                               </ul>
                             </div>
                           </Link>
 
-                          <button className={cx("button_add-cart")} onClick={() => handleAddToCart({ ...item, number: "1" })}>
-                                    <svg
-                                      width="38"
-                                      height="38"
-                                      viewBox="0 0 38 38"
-                                      fill="none"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                      <circle
-                                        cx="18.7072"
-                                        cy="18.7072"
-                                        r="18.7072"
-                                        fill="#F2F2F2"
-                                      />
-                                      <path
-                                        d="M15.1667 16.8333H12.6667L11 26H26L24.3333 16.8333H21.8333M15.1667 16.8333V14.3333C15.1667 12.4924 16.6591 11 18.5 11V11C20.3409 11 21.8333 12.4924 21.8333 14.3333V16.8333M15.1667 16.8333H21.8333M15.1667 16.8333V19.3333M21.8333 16.8333V19.3333"
-                                        stroke="#1A1A1A"
-                                        stroke-width="1.3"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                      />
-                                    </svg>
-                                  </button>
+                          <button
+                            className={cx("button_add-cart")}
+                            onClick={() =>
+                              handleAddToCart({ ...item, number: "1" })
+                            }
+                            style={{backgroundColor: "#FFF"}}
+                          >
+                            <svg
+                              width="38"
+                              height="38"
+                              viewBox="0 0 38 38"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <circle
+                                cx="18.7072"
+                                cy="18.7072"
+                                r="18.7072"
+                                fill="#F2F2F2"
+                              />
+                              <path
+                                d="M15.1667 16.8333H12.6667L11 26H26L24.3333 16.8333H21.8333M15.1667 16.8333V14.3333C15.1667 12.4924 16.6591 11 18.5 11V11C20.3409 11 21.8333 12.4924 21.8333 14.3333V16.8333M15.1667 16.8333H21.8333M15.1667 16.8333V19.3333M21.8333 16.8333V19.3333"
+                                stroke="#1A1A1A"
+                                stroke-width="1.3"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
+                          </button>
 
                           {like.some(current => current.id === item.id) ? (
                             <button

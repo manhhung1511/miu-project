@@ -176,7 +176,7 @@ export default function Account2Page() {
         // maxWidth: "45%"
       }}
     >
-      <Container maxWidth="xl" sx={{ background: "#FBD5E0", padding: "5px 0" }}>
+      <Container maxWidth="lg" sx={{ background: "#FBD5E0", padding: "5px 0" }}>
         <Stack spacing={2}>
           <Breadcrumbs separator="›" aria-label="breadcrumb">
             {breadcrumbs}

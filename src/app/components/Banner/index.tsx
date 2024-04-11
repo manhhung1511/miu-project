@@ -31,7 +31,7 @@ function imgUrl() {
 export default function Banner() {
   return (
     <Wrapper>
-      <div className="banner-content">
+      <div className="banner-content" style={{position: 'relative'}}>
         <div className="banner-img">
           <Swiper
             spaceBetween={30}
@@ -178,8 +178,8 @@ export default function Banner() {
               zIndex: "12",
               padding: "10px",
               justifyContent: "space-between",
-              width: "95%",
-              left: "3%",
+              width: "92%",
+              left: "4%",
               borderRadius: "10px",
             }}
           >
@@ -299,7 +299,7 @@ const Wrapper = styled.div`
     background-color: rgb(255, 255, 255);
     padding-top: 20px;
     border-radius: 10px;
-    left: 12.5%;
+    left: 3.5%;
     z-index: 100;
   }
   .banner-bottom-item {
@@ -316,7 +316,7 @@ const Wrapper = styled.div`
     width: 100%;
   }
   .banner-bottom-mobile-text {
-    font-size: 11px;
+    font-size: 9px;
     font-weight: 600;
   }
 `;

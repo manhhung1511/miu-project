@@ -63,17 +63,19 @@ export default function NewsPage() {
         // maxWidth: "45%"
       }}
     >
-      <Container
-        maxWidth="xl"
-        sx={{ background: "#FBD5E0", padding: {sm: "20px 0", xs: "5px 0"} }}
+      <Box
+        style={{ background: "#FBD5E0" }}
+        sx={{ padding: { sm: "20px 0", xs: "5px 0" } }}
       >
-        <Stack spacing={2}>
-          <Breadcrumbs separator="›" aria-label="breadcrumb">
-            {breadcrumbs}
-          </Breadcrumbs>
-        </Stack>
-      </Container>
-      <Container maxWidth="xl" sx={{ padding: {sm: '20px 20px', xs: '5px 8px'} }}>
+        <Container maxWidth="lg">
+          <Stack spacing={2}>
+            <Breadcrumbs separator="›" aria-label="breadcrumb">
+              {breadcrumbs}
+            </Breadcrumbs>
+          </Stack>
+        </Container>
+      </Box>
+      <Container maxWidth="lg" sx={{ padding: {sm: '20px 20px', xs: '5px 8px'} }}>
         <Grid container spacing={{sm:8 ,xs: 1}}>
           <Grid item sm={12}>
             <Box sx={{ display: "flex", alignItems: "center" }}>

@@ -10,7 +10,7 @@ const cx = classNames.bind(styles);
 export default function CompanyPage() {
     return (
         <div style={{marginTop: "77px", paddingTop:"78px"}}>
-            <Container maxWidth="xl" sx={{background: "#f1f9fd", marginBottom:"58px"}}>
+            <Container maxWidth="lg" sx={{background: "#f1f9fd", marginBottom:"58px"}}>
             <div className={cx("company_banner")} >
                  <Grid container spacing={2}>
                     <Grid item xl={6}>
@@ -42,7 +42,7 @@ export default function CompanyPage() {
                 </div>
             </Container>
 
-            <Container maxWidth="xl" sx={{marginBottom:"58px"}}>
+            <Container maxWidth="lg" sx={{marginBottom:"58px"}}>
                 <div className={cx("company_introduce")} >
                         <Typography variant="h5" gutterBottom>
                             Giới thiệu về công ty
@@ -52,7 +52,7 @@ export default function CompanyPage() {
                         </Typography>
                 </div>
             </Container>
-            <Container maxWidth="xl" sx={{}}>
+            <Container maxWidth="lg" sx={{}}>
                 <div className={cx("company_work")} >
                         <Typography variant="h5" gutterBottom>
                             Đơn hàng hiện tại

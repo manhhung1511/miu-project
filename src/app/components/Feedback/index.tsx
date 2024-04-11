@@ -10,14 +10,16 @@ export default function FeedBack() {
   return (
     <Wrapper>
       <Container maxWidth="lg">
-        <Grid container spacing={4}>
+        <Grid container spacing={2}>
+        
           <Grid item xs={12} sm={4}>
-            <div className="border_feedback">
+            <div className="border_feedback" style={{ boxShadow:
+                          "0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12)",padding: "12px"}}>
               <div className="feedback_img">
                 <div className="feedback_img-item">
                   <img src={personUrl} alt="feedback" />
                   <div className="feedback_img-persion">
-                    <h4>Hồng Hạnh</h4>
+                    <h4 style={{color: "#555"}}>Hồng Hạnh</h4>
                     <p style={{ fontSize: "13px" }}>Khách hàng</p>
                   </div>
                 </div>
@@ -54,18 +56,18 @@ export default function FeedBack() {
               </div>
               <div className="feedback_content">
                 Các sản phẩm của MiBeauty uy tín, chính hãng, mình đã mua và sử
-                dụng rất nhiều, giao hàng cũng nhanh nữa. Nói chung sẽ ủng hộ
-                lâu dài.
+                dụng rất nhiều, giao hàng cũng nhanh nữa.
               </div>
             </div>
           </Grid>
           <Grid item xs={12} sm={4}>
-            <div className="border_feedback">
+            <div className="border_feedback" style={{ boxShadow:
+                          "0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12)",padding: "12px"}}>
               <div className="feedback_img">
                 <div className="feedback_img-item">
-                  <img src={personUrl} alt="feedback" />
+                  <img src="https://i.postimg.cc/250yn0Lk/Image-12.png" alt="feedback" />
                   <div className="feedback_img-persion">
-                    <h4>Hồng Hạnh</h4>
+                    <h4 style={{color: "#555"}}>Văn Hải</h4>
                     <p style={{ fontSize: "13px" }}>Khách hàng</p>
                   </div>
                 </div>
@@ -101,19 +103,18 @@ export default function FeedBack() {
                 </p>
               </div>
               <div className="feedback_content">
-                Các sản phẩm của MiBeauty uy tín, chính hãng, mình đã mua và sử
-                dụng rất nhiều, giao hàng cũng nhanh nữa. Nói chung sẽ ủng hộ
-                lâu dài.
+              MiBeauty rất đa dạng sản phẩm và giá cả hợp lý, chất lượng sản phẩm tốt, thanh toán nhanh chóng.
               </div>
             </div>
           </Grid>
           <Grid item xs={12} sm={4}>
-            <div className="border_feedback">
+            <div className="border_feedback" style={{ boxShadow:
+                          "0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12)",padding: "12px"}}>
               <div className="feedback_img">
                 <div className="feedback_img-item">
-                  <img src={personUrl} alt="feedback" />
+                  <img src="https://i.postimg.cc/SsKVmQMy/Image-13.png" alt="feedback" />
                   <div className="feedback_img-persion">
-                    <h4>Hồng Hạnh</h4>
+                    <h4 style={{color: "#555"}}>Ngọc Anh</h4>
                     <p style={{ fontSize: "13px" }}>Khách hàng</p>
                   </div>
                 </div>
@@ -149,9 +150,7 @@ export default function FeedBack() {
                 </p>
               </div>
               <div className="feedback_content">
-                Các sản phẩm của MiBeauty uy tín, chính hãng, mình đã mua và sử
-                dụng rất nhiều, giao hàng cũng nhanh nữa. Nói chung sẽ ủng hộ
-                lâu dài.
+              Shop đóng gói hàng cẩn thận, giao hàng nhanh, giá cả rất phải chăng, sản phẩm tốt, lần sau sẽ tiếp tục ủng hộ.
               </div>
             </div>
           </Grid>
