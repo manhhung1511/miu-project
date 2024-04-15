@@ -248,7 +248,7 @@ const Footer = () => {
         >
           <Box sx={{ flexGrow: 1 }} style={{ padding: "24px 0px" }}>
             <Grid container spacing={2}>
-              <Grid item xl={3} xs={12}>
+              <Grid item sm={4} xs={12}>
                 <div className={cx("footer_main")}>
                   <h4>Về MiBeauty</h4>
                   <p className={cx("text_p")}>
@@ -266,7 +266,7 @@ const Footer = () => {
                   </p>
                 </div>
               </Grid>
-              <Grid item xl={3} xs={4}>
+              <Grid item sm={2} xs={4}>
                 <div className={cx("footer_main")}>
                   <h4>Tài khoản</h4>
                   <p className={cx("text_p")}>
@@ -291,14 +291,14 @@ const Footer = () => {
                   </p>
                 </div>
               </Grid>
-              <Grid item xl={3} xs={4}>
+              <Grid item sm={3} xs={4}>
                 <div className={cx("footer_main")}>
                   <h4>Hỗ trợ</h4>
                   <p className={cx("text_p")}>Liên hệ</p>
                   <p className={cx("text_p")}>Câu hỏi thường gặp</p>
                 </div>
               </Grid>
-              <Grid item xl={3} xs={4}>
+              <Grid item sm={3} xs={4}>
                 <div className={cx("footer_main")}>
                   <h4>Tải về ứng dụng</h4>
 

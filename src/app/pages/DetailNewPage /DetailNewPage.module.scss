@@ -1,0 +1,17 @@
+.detail_icon {
+  padding-right: 20px;
+}
+.input_form {
+  display: grid;
+  input, textarea {
+    padding: 12px 15px;
+      border-radius: 10px;
+      border: 1px solid #9999;
+      outline: none;
+  }
+}
+.order_button {
+  padding: 10px !important;
+    border-radius: 20px !important;
+    margin-top: 20px !important;
+}

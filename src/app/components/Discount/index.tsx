@@ -42,6 +42,40 @@ export default function Discount() {
     }
   };
 
+
+  const [like, setLike] = React.useState([]);
+
+  React.useEffect(() => {
+    const allLike = JSON.parse(localStorage.getItem("like") || "[]");
+    setLike(allLike);
+  }, []);
+  interface itemLike {
+    id: string;
+    category: string;
+    image?: "string";
+    name?: string;
+    price?: string;
+  }
+
+  function handleLike(item: itemLike) {
+    const allLike = JSON.parse(localStorage.getItem("like") || "[]");
+    const isExist = allLike.some(current => current.id === item.id);
+
+    // Nếu item chưa tồn tại trong allLike, thêm vào mảng và cập nhật state và localStorage
+    if (!isExist) {
+      const newArr = [...allLike, item];
+      setLike(newArr);
+      localStorage.setItem("like", JSON.stringify(newArr));
+    }
+  }
+
+  const handleUnLike = id => {
+    const allLike = JSON.parse(localStorage.getItem("like") || "[]");
+    const deleteLike = allLike.filter(item => item.id !== id);
+    setLike(deleteLike);
+    localStorage.setItem("like", JSON.stringify(deleteLike));
+  };
+
   return (
     <Wrapper>
      
@@ -55,7 +89,7 @@ export default function Discount() {
           <div className="border_discount">
           <Link to={`/detail/${item.id}`}>
               <div className="discount_img">
-                <img src={item.image} alt="discount" />
+                <img style={{maxWidth: "100%"}}src={item.image} alt="discount" />
               </div>
               <div className="discount_content">
                 <p className="discount_name">
@@ -94,7 +128,55 @@ export default function Discount() {
                         />
                       </svg>
                     </button>
+
+                    {like.some(current => current.id === item.id) ? (
+                            <button
+                              className="discount_like"
+                              onClick={() => handleUnLike(item.id)}
+                              style={{ background: "#FFF" }}
+                            >
+                              <svg
+                                width="28"
+                                height="24"
+                                viewBox="0 0 28 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M13.8369 23.7983C-12.8293 9.05945 5.83739 -6.94055 13.8369 3.17686C21.8374 -6.94055 40.504 9.05945 13.8369 23.7983Z"
+                                  fill="#FA58A6"
+                                />
+                              </svg>
+                            </button>
+                          ) : (
+                            <button
+                              className="discount_like"
+                              onClick={() => handleLike(item)}
+                              style={{ background: "#FFF" }}
+                            >
+                              <svg
+                                width="30"
+                                height="26"
+                                viewBox="0 0 30 26"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M14.8369 24.7983C-11.8293 10.0595 6.83739 -5.94055 14.8369 4.17686C22.8374 -5.94055 41.504 10.0595 14.8369 24.7983Z"
+                                  stroke="#1A1A1A"
+                                  stroke-width="1.5"
+                                />
+                              </svg>
+                            </button>
+                          )}
+
+                <div className="discount_percent">
+                        <p style={{color: "#FFF",
+      padding: "2px"}}>{item.discount}</p>
+                </div>
           </div>
+
+
         </Grid>
         ))
       }
@@ -109,10 +191,13 @@ const Wrapper = styled.div`
     max-width: 100%;
   }
   .discount_content {
+    padding: 7px 2px;
   }
   .discount_name {
     font-size: 14px;
     margin-left: 4px;
+    padding-top: 5px;
+    padding-bottom: 7px;
   }
   .discount_content-list {
     display: flex;
@@ -149,8 +234,25 @@ const Wrapper = styled.div`
   }
   .button_add-cart {
     position: absolute;
-    bottom: 1%;
+    bottom: 0%;
     right: 3%;
     background-color: "#FFF";
+  }
+  .discount_like {
+    position: absolute;
+    top: 3%;
+    right: 3%;
+  }
+  .discount_img {
+    border-bottom: 1px solid #3333;
+  }
+  .discount_percent {
+    background: #EA4B48;
+    width: 20%;
+    border-radius: 3px;
+    position: absolute;
+    top: 2%;
+    left: 3%;
+}
   }
 `;

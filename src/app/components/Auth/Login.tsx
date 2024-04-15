@@ -25,7 +25,8 @@ export default function Login() {
   const navigateTo = useNavigate();
 
   const handleSubmit = async values => {
-    localStorage.setItem("user", JSON.stringify(values));
+    const information = { name: "Tranh", ...values };
+    localStorage.setItem("user", JSON.stringify(information));
     navigateTo("/", { replace: true });
   };
 

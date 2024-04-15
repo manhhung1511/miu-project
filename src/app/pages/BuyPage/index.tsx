@@ -100,17 +100,19 @@ export default function BuyPage() {
       // maxWidth: "45%"
     }}
   >
-      <Container
-        maxWidth="xl"
-        sx={{ background: "#FBD5E0", padding: {sm: "20px 0", xs: "5px 0"} }}
+       <Box
+        style={{ background: "#FBD5E0" }}
+        sx={{ padding: { sm: "20px 0", xs: "5px 0" } }}
       >
-        <Stack spacing={2}>
-          <Breadcrumbs separator="›" aria-label="breadcrumb">
-            {breadcrumbs}
-          </Breadcrumbs>
-        </Stack>
-      </Container>
-      <Container maxWidth="xl">
+        <Container maxWidth="lg">
+          <Stack spacing={2}>
+            <Breadcrumbs separator="›" aria-label="breadcrumb">
+              {breadcrumbs}
+            </Breadcrumbs>
+          </Stack>
+        </Container>
+      </Box>
+      <Container maxWidth="lg">
         <Grid container spacing={2}>
           <Grid item sm={7}>
             <Typography variant="h3" sx={{fontSize: {sm: "24px", xs: "20px"}, fontWeight:'600', padding: '20px 0'}}>Địa chỉ nhận hàng</Typography>

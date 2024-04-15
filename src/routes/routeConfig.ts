@@ -12,12 +12,15 @@ export const routeConfig = {
   news: "/news",
   introduce: "/introduce",
   contact: "/contact",
+  detailNews: "/news/detail",
+  search: "/search",
   //access denied
   AccessDenied: "/access-denied",
 
   //mobile
   accountMobile: "/account/mobile",
   accountOrder: "/account/order",
+  detailAccount: "/chi-tiet-tai-khoan",
 
   //admin
 

@@ -220,7 +220,7 @@ export default function Account2Page() {
                     {row.carbs}
                   </TableCell>
                   <TableCell style={{ fontSize: "18px" }}>
-                    <Link to="/" style={{ color: "#FA58A6" }}>
+                    <Link to="/chi-tiet-tai-khoan" style={{ color: "#FA58A6" }}>
                       {row.protein}
                     </Link>
                   </TableCell>

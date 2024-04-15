@@ -22,18 +22,18 @@ import Typography from "@mui/material/Typography";
 
 import { useCartStore } from "core/store/useCartStore";
 
-import categories from "../../../datas/categories.json";
-import styles from "./CategoryPage.module.scss";
+import categories from "../../../datas/search.json";
+import styles from "./SearchPage.module.scss";
 
 const cx = classNames.bind(styles);
 
-export default function CategoryPage() {
+export default function SearchPage() {
   function handleClick(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
     event.preventDefault();
     console.info("You clicked a breadcrumb.");
   }
 
-  const [value, setValue] = React.useState(1);
+  const [value, setValue] = React.useState();
 
   const [like, setLike] = React.useState([]);
   const handleChangeRadio = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -205,9 +205,8 @@ export default function CategoryPage() {
                 fontWeight: "600",
               }}
             >
-              Danh mục sản phẩm
             </Typography>
-            <FormControl
+            {/* <FormControl
               sx={{ m: 1, width: "50%", display: { xs: "block", sm: "none" } }}
             >
               <Typography
@@ -254,7 +253,7 @@ export default function CategoryPage() {
                   Treatment
                 </MenuItem>
               </Select>
-            </FormControl>
+            </FormControl> */}
             <FormControl sx={{ display: { xs: "none", sm: "block" } }}>
               <RadioGroup
                 aria-labelledby="demo-radio-buttons-group-label"
@@ -345,6 +344,9 @@ export default function CategoryPage() {
             </FormControl>
           </Grid>
           <Grid item sm={9}>
+            <Typography variant="h3" sx={{textAlign: 'center', fontSize: "24px", fontWeight: '600', padding:'20px 0 30px 0'}}>
+              Kết quả tìm kiếm cho “La Roche Posay”
+            </Typography>
             <Box
               sx={{ alignItems: "center", display: { xs: "none", sm: "flex" } }}
             >
@@ -367,7 +369,6 @@ export default function CategoryPage() {
             <Box sx={{ marginTop: "20px" }}>
               <Grid container spacing={2}>
                 {categories?.map(item => {
-                  if (item.category == value) {
                     return (
                       <Grid item xs={6} sm={3}>
                         <div className={cx("border_product")}>
@@ -493,7 +494,7 @@ export default function CategoryPage() {
                         </div>
                       </Grid>
                     );
-                  }
+                  
                 })}
               </Grid>
             </Box>

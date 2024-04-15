@@ -22,6 +22,8 @@ import LoginPageAdmin from "core/app/pages/admin/LoginPage";
 import DashboardPage from "core/app/pages/admin/DashboardPage";
 import Account2Page from "core/app/pages/Account2Page";
 import Account1Page from "core/app/pages/Account1Page ";
+import DetailNewPage from "core/app/pages/DetailNewPage ";
+import SearchPage from "core/app/pages/SearchPage";
 
 
 const publicRoutes: PublicRoutes[] = [
@@ -94,6 +96,17 @@ const publicRoutes: PublicRoutes[] = [
   {
     path: routeConfig.accountOrder,
     component: memo(Account2Page),
+  },
+  {
+    path: routeConfig.detailNews,
+    component: memo(DetailNewPage),
+  },{
+    path: routeConfig.search,
+    component: memo(SearchPage),
+  },
+  {
+    path: routeConfig.detailAccount,
+    component: memo(DetailNewPage),
   },
 ];
 

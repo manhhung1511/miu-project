@@ -1,0 +1,58 @@
+[
+    {
+        "id": "122",
+        "name": "Toner La Roche Posay Effaclar Astringent",
+        "price": "730.000đ",
+        "image": "https://i.postimg.cc/PfDXP0cX/Rectangle-85.png",
+        "category": "1"
+    },
+    {
+        "id": "222",
+        "name": "Sữa Rửa Mặt La Roche Posay Effaclar Purifying Gel",
+        "price": "465.000đ",
+        "image": "https://i.postimg.cc/mkQkWnMS/Rectangle-85-13.png",
+        "category": "1"
+    },
+    {
+        "id": "223",
+        "name": "Serum La Roche Posay Cicaplast B5 30ml",
+        "price": "465.000đ",
+        "image": "https://i.postimg.cc/zG4v7xJ8/Image-15.png",
+        "category": "1"
+    },
+    {
+        "id": "224",
+        "name": "Serum La Roche Posay Retinol B3 30ml",
+        "price": "465.000đ",
+        "image": "https://i.postimg.cc/8C3GCbmf/Rectangle-85-1.png",
+        "category": "1"
+    },
+    {
+        "id": "225",
+        "name": "Kem Chống Nắng La Roche Posay Anthelios Oil Correct",
+        "price": "465.000đ",
+        "image": "https://i.postimg.cc/7YLKBykD/Rectangle-85-4.png",
+        "category": "1"
+    },
+    {
+        "id": "226",
+        "name": "Kem Dưỡng La Roche Posay Redermic R Anti Aging",
+        "price": "465.000đ",
+        "image": "https://i.postimg.cc/PfDXP0cX/Rectangle-85.png",
+        "category": "1"
+    },
+    {
+        "id": "227",
+        "name": "KCN La Roche Posay Anthelios UVmune 400 Fluid",
+        "price": "465.000đ",
+        "image": "https://i.postimg.cc/zDTNJKb3/Rectangle-85-2.png",
+        "category": "1"
+    },
+    {
+        "id": "228",
+        "name": "KCN La Roche Posay Anthelios UVMUNE 400 Gel",
+        "price": "465.000đ",
+        "image": "https://i.postimg.cc/rs3f9ysT/Rectangle-85-18.png",
+        "category": "1"
+    }
+]

@@ -64,6 +64,27 @@ function Header() {
     setMobileOpen(prevState => !prevState);
   };
 
+  //set like product
+  React.useEffect(() => {
+    let newArr = [
+      {
+        id: "22",
+        name: "Nước Tẩy Trang Innisfree Green Tea Purifying",
+        price: "465.000đ",
+        image: "https://i.postimg.cc/8C3GCbmf/Rectangle-85-1.png",
+        category: "10",
+      },
+      {
+        id: "23",
+        name: "Nước Tẩy Trang PrettySkin The Pure Purifying",
+        price: "580.000đ",
+        image: "https://i.postimg.cc/zDTNJKb3/Rectangle-85-2.png",
+        category: "10",
+      },
+    ];
+    localStorage.setItem("like", JSON.stringify(newArr));
+  }, []);
+
   const { classes, cx } = useStyles();
 
   const infor = getUser();
@@ -86,7 +107,7 @@ function Header() {
         {infor ? (
           <Box>
             <Link style={{ padding: "9px 0", fontSize: "12px" }} to="/account">
-              {infor?.email}
+              {infor?.name}
             </Link>
             <div
               className="header_account-mobile"
@@ -237,10 +258,11 @@ function Header() {
                     >
                       {infor ? (
                         <Link
-                          style={{ color: "white", padding: "9px 0" }}
+                          style={{ color: "white", padding: "9px 0", display: "flex", alignItems: "center" }}
                           to="/account"
                         >
-                          {infor?.email}
+                          <img src="https://i.postimg.cc/NF7spTM8/Image-19.png" alt="img" style={{marginRight: "5px"}} />
+                          {infor?.name}
                         </Link>
                       ) : (
                         <>
@@ -503,7 +525,11 @@ function Header() {
                       />
                     </svg>
                   </Link>
-                  <Link to={"/cart"} className={classes.headerLinkAccout} style={{position: 'relative'}}>
+                  <Link
+                    to={"/cart"}
+                    className={classes.headerLinkAccout}
+                    style={{ position: "relative" }}
+                  >
                     <svg
                       width="18"
                       height="18"
@@ -521,170 +547,170 @@ function Header() {
                     </svg>
                   </Link>
                   <div
-                        className={classes.headerCartItem}
-                        style={{
-                          width: "22px",
-                          height: "23px",
-                          backgroundColor: "#F50779",
-                          color: "#FFF",
-                          position: "absolute",
-                          top: "14%",
-                          left: "87%",
-                          borderRadius: "20px",
-                          textAlign: "center",
-                        }}
-                      >
-                        {cart}
-                      </div>
+                    className={classes.headerCartItem}
+                    style={{
+                      width: "22px",
+                      height: "23px",
+                      backgroundColor: "#F50779",
+                      color: "#FFF",
+                      position: "absolute",
+                      top: "14%",
+                      left: "87%",
+                      borderRadius: "20px",
+                      textAlign: "center",
+                    }}
+                  >
+                    {cart}
+                  </div>
                 </Box>
               </div>
             </Container>
           </Toolbar>
-        <div style={{backgroundColor: "#F5F5F5" }}>
-          <Container maxWidth="lg">
-            <Box
-              sx={{
-                display: { xs: "none", sm: "flex" },
-                padding: "21px 4px 9px 0px",
-                justifyContent: "space-between",
-              }}
-            >
-              <div>
-                <Link
-                  key={10}
-                  className={classes.headerLink}
-                  to="/"
-                  onMouseEnter={handleClose}
-                  style={{ paddingLeft: "0px" }}
-                >
-                  Trang chủ
-                </Link>
-                <Link
-                  aria-owns={anchorEl ? "basic-menu" : undefined}
-                  aria-haspopup="true"
-                  className={classes.headerLink}
-                  onMouseEnter={handleClick}
-                  aria-expanded={Boolean(anchorEl)}
-                  to=""
-                >
-                  Danh mục sản phẩm
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M3.33341 5.66699L8.00008 10.3337L12.6667 5.66699"
-                      stroke="#999999"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </Link>
-                <Menu
-                  anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
-                  transformOrigin={{ vertical: "top", horizontal: "left" }}
-                  id="basic-menu"
-                  anchorEl={anchorEl}
-                  open={Boolean(anchorEl)}
-                  onClose={handleClose}
-                  MenuListProps={{ onMouseLeave: handleClose }}
-                  sx={{ left: "10px" }}
-                >
+          <div style={{ backgroundColor: "#F5F5F5" }}>
+            <Container maxWidth="lg">
+              <Box
+                sx={{
+                  display: { xs: "none", sm: "flex" },
+                  padding: "21px 4px 9px 0px",
+                  justifyContent: "space-between",
+                }}
+              >
+                <div>
                   <Link
-                    to={routeConfig.category}
-                    style={{ textDecoration: "none", color: "#999999" }}
-                    onMouseEnter={e => (e.target.style.color = "#FA58A6")}
-                    onMouseLeave={e => (e.target.style.color = "#999999")}
-                  >
-                    <MenuItem onClick={handleClose}>Sữa rửa mặt</MenuItem>
-                  </Link>
-                  <Link
-                    to=""
-                    style={{ textDecoration: "none", color: "#999999" }}
-                    onMouseEnter={e => (e.target.style.color = "#FA58A6")}
-                    onMouseLeave={e => (e.target.style.color = "#999999")}
-                  >
-                    <MenuItem onClick={handleClose}>Toner</MenuItem>
-                  </Link>
-                  <Link
-                    to=""
-                    style={{ textDecoration: "none", color: "#999999" }}
-                    onMouseEnter={e => (e.target.style.color = "#FA58A6")}
-                    onMouseLeave={e => (e.target.style.color = "#999999")}
-                  >
-                    <MenuItem onClick={handleClose}>Serum</MenuItem>
-                  </Link>
-                  <Link
-                    to=""
-                    style={{ textDecoration: "none", color: "#999999" }}
-                    onMouseEnter={e => (e.target.style.color = "#FA58A6")}
-                    onMouseLeave={e => (e.target.style.color = "#999999")}
-                  >
-                    <MenuItem onClick={handleClose}>Kem dưỡng ẩm</MenuItem>
-                  </Link>
-                  <Link
-                    to=""
-                    style={{ textDecoration: "none", color: "#999999" }}
-                    onMouseEnter={e => (e.target.style.color = "#FA58A6")}
-                    onMouseLeave={e => (e.target.style.color = "#999999")}
-                  >
-                    <MenuItem onClick={handleClose}>Kem chống nắng</MenuItem>
-                  </Link>
-                </Menu>
-
-                {Object.keys(navItems).map(item => (
-                  <Link
-                    key={navItems[item]}
+                    key={10}
                     className={classes.headerLink}
-                    to={item}
+                    to="/"
                     onMouseEnter={handleClose}
+                    style={{ paddingLeft: "0px" }}
                   >
-                    {navItems[item]}
+                    Trang chủ
                   </Link>
-                ))}
-              </div>
-
-              <div style={{ display: "flex" }}>
-                <span>
-                  <svg
-                    width="28"
-                    height="28"
-                    viewBox="0 0 28 28"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <Link
+                    aria-owns={anchorEl ? "basic-menu" : undefined}
+                    aria-haspopup="true"
+                    className={classes.headerLink}
+                    onMouseEnter={handleClick}
+                    aria-expanded={Boolean(anchorEl)}
+                    to=""
                   >
-                    <path
-                      d="M17.436 4.375C18.9194 4.77396 20.2719 5.55567 21.3581 6.64184C22.4442 7.72801 23.226 9.08051 23.6249 10.5639"
-                      stroke="#999999"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M16.5308 7.75684C17.4206 7.99622 18.2319 8.46518 18.8835 9.11675C19.535 9.76832 20.004 10.5796 20.2434 11.4695"
-                      stroke="#999999"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M10.115 13.6522C11.0224 15.5078 12.5263 17.0053 14.3859 17.9047C14.522 17.9692 14.6727 17.997 14.8229 17.9855C14.9731 17.974 15.1178 17.9235 15.2425 17.839L17.9812 16.0138C18.1022 15.933 18.2414 15.8837 18.3862 15.8702C18.5311 15.8568 18.677 15.8797 18.8107 15.9368L23.9339 18.133C24.1079 18.207 24.2532 18.3354 24.3479 18.4991C24.4426 18.6627 24.4815 18.8527 24.4589 19.0404C24.2967 20.3074 23.6784 21.4718 22.7196 22.3158C21.7608 23.1597 20.5273 23.6253 19.25 23.6254C15.3049 23.6254 11.5214 22.0582 8.73179 19.2686C5.94218 16.479 4.375 12.6955 4.375 8.75041C4.37512 7.4732 4.84074 6.23982 5.68471 5.28118C6.52867 4.32254 7.6931 3.70437 8.96 3.54241C9.14771 3.51977 9.33769 3.55873 9.50134 3.65342C9.66499 3.7481 9.79345 3.89339 9.86738 4.06741L12.0654 9.19491C12.1219 9.32739 12.1449 9.47178 12.1322 9.61527C12.1195 9.75875 12.0716 9.89688 11.9928 10.0174L10.1728 12.7982C10.0901 12.9234 10.0414 13.0679 10.0313 13.2175C10.0212 13.3672 10.05 13.517 10.115 13.6522V13.6522Z"
-                      stroke="#999999"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </span>
-                <p style={{ color: "#999999" }}>(+84) 903 499 519</p>
-              </div>
-            </Box>
-          </Container>
-        </div>
+                    Danh mục sản phẩm
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M3.33341 5.66699L8.00008 10.3337L12.6667 5.66699"
+                        stroke="#999999"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </Link>
+                  <Menu
+                    anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
+                    transformOrigin={{ vertical: "top", horizontal: "left" }}
+                    id="basic-menu"
+                    anchorEl={anchorEl}
+                    open={Boolean(anchorEl)}
+                    onClose={handleClose}
+                    MenuListProps={{ onMouseLeave: handleClose }}
+                    sx={{ left: "10px" }}
+                  >
+                    <Link
+                      to={routeConfig.category}
+                      style={{ textDecoration: "none", color: "#999999" }}
+                      onMouseEnter={e => (e.target.style.color = "#FA58A6")}
+                      onMouseLeave={e => (e.target.style.color = "#999999")}
+                    >
+                      <MenuItem onClick={handleClose}>Sữa rửa mặt</MenuItem>
+                    </Link>
+                    <Link
+                      to=""
+                      style={{ textDecoration: "none", color: "#999999" }}
+                      onMouseEnter={e => (e.target.style.color = "#FA58A6")}
+                      onMouseLeave={e => (e.target.style.color = "#999999")}
+                    >
+                      <MenuItem onClick={handleClose}>Toner</MenuItem>
+                    </Link>
+                    <Link
+                      to=""
+                      style={{ textDecoration: "none", color: "#999999" }}
+                      onMouseEnter={e => (e.target.style.color = "#FA58A6")}
+                      onMouseLeave={e => (e.target.style.color = "#999999")}
+                    >
+                      <MenuItem onClick={handleClose}>Serum</MenuItem>
+                    </Link>
+                    <Link
+                      to=""
+                      style={{ textDecoration: "none", color: "#999999" }}
+                      onMouseEnter={e => (e.target.style.color = "#FA58A6")}
+                      onMouseLeave={e => (e.target.style.color = "#999999")}
+                    >
+                      <MenuItem onClick={handleClose}>Kem dưỡng ẩm</MenuItem>
+                    </Link>
+                    <Link
+                      to=""
+                      style={{ textDecoration: "none", color: "#999999" }}
+                      onMouseEnter={e => (e.target.style.color = "#FA58A6")}
+                      onMouseLeave={e => (e.target.style.color = "#999999")}
+                    >
+                      <MenuItem onClick={handleClose}>Kem chống nắng</MenuItem>
+                    </Link>
+                  </Menu>
+
+                  {Object.keys(navItems).map(item => (
+                    <Link
+                      key={navItems[item]}
+                      className={classes.headerLink}
+                      to={item}
+                      onMouseEnter={handleClose}
+                    >
+                      {navItems[item]}
+                    </Link>
+                  ))}
+                </div>
+
+                <div style={{ display: "flex" }}>
+                  <span>
+                    <svg
+                      width="28"
+                      height="28"
+                      viewBox="0 0 28 28"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M17.436 4.375C18.9194 4.77396 20.2719 5.55567 21.3581 6.64184C22.4442 7.72801 23.226 9.08051 23.6249 10.5639"
+                        stroke="#999999"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M16.5308 7.75684C17.4206 7.99622 18.2319 8.46518 18.8835 9.11675C19.535 9.76832 20.004 10.5796 20.2434 11.4695"
+                        stroke="#999999"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M10.115 13.6522C11.0224 15.5078 12.5263 17.0053 14.3859 17.9047C14.522 17.9692 14.6727 17.997 14.8229 17.9855C14.9731 17.974 15.1178 17.9235 15.2425 17.839L17.9812 16.0138C18.1022 15.933 18.2414 15.8837 18.3862 15.8702C18.5311 15.8568 18.677 15.8797 18.8107 15.9368L23.9339 18.133C24.1079 18.207 24.2532 18.3354 24.3479 18.4991C24.4426 18.6627 24.4815 18.8527 24.4589 19.0404C24.2967 20.3074 23.6784 21.4718 22.7196 22.3158C21.7608 23.1597 20.5273 23.6253 19.25 23.6254C15.3049 23.6254 11.5214 22.0582 8.73179 19.2686C5.94218 16.479 4.375 12.6955 4.375 8.75041C4.37512 7.4732 4.84074 6.23982 5.68471 5.28118C6.52867 4.32254 7.6931 3.70437 8.96 3.54241C9.14771 3.51977 9.33769 3.55873 9.50134 3.65342C9.66499 3.7481 9.79345 3.89339 9.86738 4.06741L12.0654 9.19491C12.1219 9.32739 12.1449 9.47178 12.1322 9.61527C12.1195 9.75875 12.0716 9.89688 11.9928 10.0174L10.1728 12.7982C10.0901 12.9234 10.0414 13.0679 10.0313 13.2175C10.0212 13.3672 10.05 13.517 10.115 13.6522V13.6522Z"
+                        stroke="#999999"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <p style={{ color: "#999999" }}>(+84) 903 499 519</p>
+                </div>
+              </Box>
+            </Container>
+          </div>
         </AppBar>
         <nav>
           <Drawer

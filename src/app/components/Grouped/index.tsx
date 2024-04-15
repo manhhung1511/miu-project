@@ -9,13 +9,17 @@ import {
   addRecentSearch,
   getRecentSearches,
 } from "core/localstorages/recentSearches";
+import { useNavigate } from "react-router-dom";
 
 export default function Grouped() {
+  const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = React.useState({
     keyword: "",
   });
   const handleOnclick = () => {
     addRecentSearch(searchTerm.keyword);
+    navigate("/search");
+
   };
   return (
     <Wrapper>
