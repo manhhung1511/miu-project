@@ -57,3 +57,13 @@ a {
     right: 3%;
     background-color: "#FFF";
   }
+
+  .cart_hover2 {
+    display: none;
+  }
+  .button_add-cart:hover .cart_hover1 {
+    display: none
+  }
+  .button_add-cart:hover .cart_hover2 {
+    display: block
+  }

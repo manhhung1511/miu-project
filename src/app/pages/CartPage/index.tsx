@@ -19,6 +19,8 @@ import { DataGrid, GridColDef } from "@mui/x-data-grid";
 
 import products from "../../../datas/product.json";
 import styles from "./CartPage.module.scss";
+import { useCartStore } from "core/store/useCartStore";
+import { useShallow } from "zustand/react/shallow";
 
 const cx = classNames.bind(styles);
 
@@ -62,10 +64,18 @@ export default function CartPage() {
     setCart(allCart);
   }, []);
 
+  const { handleCart } = useCartStore(
+    useShallow(state => ({
+      handleCart: state.handleCart,
+    })),
+  );
+
   const handleDeleteCart = item => {
     const deleteSuccess = cart.filter(item1 => item1.id !== item.id);
     setCart(deleteSuccess);
     localStorage.setItem("cart", JSON.stringify(deleteSuccess));
+    let count = deleteSuccess.length;
+    handleCart(count);
   };
 
   const formattedPrice = price => {
@@ -357,12 +367,13 @@ export default function CartPage() {
                 <p style={{ fontWeight: "600" }}>Tổng: </p>
                 <div style={{ fontWeight: "600" }}>{sumNumber()}</div>
               </div>
-
+              <Link to="/buy" style={{ color: "#FFF" }}>
               <Button className={cx("button_buy")} variant="contained">
-                <Link to="/buy" style={{ color: "#FFF" }}>
+               
                   Mua hàng
-                </Link>
               </Button>
+              </Link>
+
             </div>
           </Grid>
         </Grid>

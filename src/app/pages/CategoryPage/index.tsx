@@ -43,6 +43,7 @@ export default function CategoryPage() {
   const changeCategory = (event: SelectChangeEvent) => {
     setValue(event.target.value);
   };
+  
 
   useEffect(() => {
     const allLike = JSON.parse(localStorage.getItem("like") || "[]");
@@ -164,37 +165,43 @@ export default function CategoryPage() {
               sx={{ display: { xs: "none", sm: "block" }, marginRight: "10px" }}
             >
               Bộ lọc
-            <span style={{marginLeft: "5px"}}>
-            <svg
-                width="22"
-                height="19"
-                viewBox="0 0 22 19"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M18 5H9"
-                  stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M13 14H4"
-                  stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <circle cx="5" cy="5" r="4" stroke="white" stroke-width="1.5" />
-                <circle
-                  cx="17"
-                  cy="14"
-                  r="4"
-                  stroke="white"
-                  stroke-width="1.5"
-                />
-              </svg>
+              <span style={{ marginLeft: "5px" }}>
+                <svg
+                  width="22"
+                  height="19"
+                  viewBox="0 0 22 19"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M18 5H9"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M13 14H4"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <circle
+                    cx="5"
+                    cy="5"
+                    r="4"
+                    stroke="white"
+                    stroke-width="1.5"
+                  />
+                  <circle
+                    cx="17"
+                    cy="14"
+                    r="4"
+                    stroke="white"
+                    stroke-width="1.5"
+                  />
+                </svg>
               </span>
             </Button>
             <Typography
@@ -274,7 +281,7 @@ export default function CategoryPage() {
                       }}
                     />
                   }
-                  label="Tẩy trang (34)"
+                  label="Tẩy trang (8)"
                 />
                 <FormControlLabel
                   value="2"
@@ -287,7 +294,7 @@ export default function CategoryPage() {
                       }}
                     />
                   }
-                  label="Sữa rửa mặt (50)"
+                  label="Sữa rửa mặt (8)"
                 />
                 <FormControlLabel
                   value="3"
@@ -381,7 +388,7 @@ export default function CategoryPage() {
                             </div>
                             <div className={cx("product_content")}>
                               <p
-                                style={{ marginLeft: "5px", fontSize: "13px"}}
+                                style={{ marginLeft: "5px", fontSize: "13px" }}
                                 className="product_name"
                               >
                                 {item?.name}
@@ -403,29 +410,54 @@ export default function CategoryPage() {
                             onClick={() =>
                               handleAddToCart({ ...item, number: "1" })
                             }
-                            style={{backgroundColor: "#FFF"}}
+                            style={{ backgroundColor: "#FFF" }}
                           >
-                            <svg
-                              width="38"
-                              height="38"
-                              viewBox="0 0 38 38"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <circle
-                                cx="18.7072"
-                                cy="18.7072"
-                                r="18.7072"
-                                fill="#F2F2F2"
-                              />
-                              <path
-                                d="M15.1667 16.8333H12.6667L11 26H26L24.3333 16.8333H21.8333M15.1667 16.8333V14.3333C15.1667 12.4924 16.6591 11 18.5 11V11C20.3409 11 21.8333 12.4924 21.8333 14.3333V16.8333M15.1667 16.8333H21.8333M15.1667 16.8333V19.3333M21.8333 16.8333V19.3333"
-                                stroke="#1A1A1A"
-                                stroke-width="1.3"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                              />
-                            </svg>
+                            <span className={cx("cart_hover1")}>
+                              <svg
+                                width="38"
+                                height="38"
+                                viewBox="0 0 38 38"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <circle
+                                  cx="18.7072"
+                                  cy="18.7072"
+                                  r="18.7072"
+                                  fill="#F2F2F2"
+                                />
+                                <path
+                                  d="M15.1667 16.8333H12.6667L11 26H26L24.3333 16.8333H21.8333M15.1667 16.8333V14.3333C15.1667 12.4924 16.6591 11 18.5 11V11C20.3409 11 21.8333 12.4924 21.8333 14.3333V16.8333M15.1667 16.8333H21.8333M15.1667 16.8333V19.3333M21.8333 16.8333V19.3333"
+                                  stroke="#1A1A1A"
+                                  stroke-width="1.3"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </svg>
+                            </span>
+                            <span className={cx("cart_hover2")}>
+                              <svg
+                                width="38"
+                                height="38"
+                                viewBox="0 0 38 38"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <circle
+                                  cx="18.7072"
+                                  cy="19.1217"
+                                  r="18.7072"
+                                  fill="#FA58A6"
+                                />
+                                <path
+                                  d="M15.1667 17.2478H12.6667L11 26.4144H26L24.3333 17.2478H21.8333M15.1667 17.2478V14.7478C15.1667 12.9068 16.6591 11.4144 18.5 11.4144V11.4144C20.3409 11.4144 21.8333 12.9068 21.8333 14.7478V17.2478M15.1667 17.2478H21.8333M15.1667 17.2478V19.7478M21.8333 17.2478V19.7478"
+                                  stroke="white"
+                                  stroke-width="1.3"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </svg>
+                            </span>
                           </button>
 
                           {like.some(current => current.id === item.id) ? (

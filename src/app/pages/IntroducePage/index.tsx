@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-
+import introduce from "../../../assets/images/introduce.png"
 
 import styles from "./IntroducePage.module.scss";
 
@@ -99,9 +99,10 @@ export default function IntroducePage() {
             <div>
               <img
                 style={{ width: "100%" }}
-                src="https://i.postimg.cc/DyDgKsX4/BG.png"
+                src={introduce}
                 alt="img"
-              />
+         
+            />
             </div>
           </Grid>
       <Container maxWidth="lg" sx={{ padding: "20px 8px" }}>

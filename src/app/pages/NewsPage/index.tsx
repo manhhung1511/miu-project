@@ -95,7 +95,7 @@ export default function NewsPage() {
                 news?.map((item) => (
                     <Grid item xs={12} sm={4}>
                     <div className={cx("border_product")}>
-                      <Link to={`/detail/${item.id}`}>
+                      <Link to={`/news/detail`}>
                         <div className={cx("product_img")}>
                           <img style={{ width: '100%'}} src={item?.image} alt="product" />
                         </div>

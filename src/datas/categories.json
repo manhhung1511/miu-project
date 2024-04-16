@@ -65,7 +65,7 @@
     {
         "id": "32",
         "name": "Sữa Rửa Mặt Innisfree Volcanic Pore",
-        "price": "380.000đ",
+        "price": "165.000đ",
         "image": "https://i.postimg.cc/8C3GCbmf/Rectangle-85-1.png",
         "category": "2"
     },
@@ -81,6 +81,33 @@
         "name": "Sữa Rửa Mặt Innisfree Volcanic Pore BHA",
         "price": "380.000đ",
         "image": "https://i.postimg.cc/mkQkWnMS/Rectangle-85-13.png",
+        "category": "2"
+    },
+    {
+        "id": "35",
+        "name": "Sữa Rửa Mặt Caryophy Glass Skin Cleansing Foam",
+        "price": "270.000đ",
+        "image": "https://i.postimg.cc/3wMKWtg8/Rectangle-85-19.png",
+        "category": "2"
+    },
+    {
+        "id": "36",
+        "name": "Sữa Rửa Mặt Muji Face Soap Scrub Glass Skin",
+        "price": "280.000đ",
+        "image": "https://i.postimg.cc/fWP1wJ7Z/Rectangle-85-20.png",
+        "category": "2"
+    },
+    {
+        "id": "37",
+        "name": "Sữa Rửa Mặt Beldora 299 Prime 5.5 Foam Cleanser",
+        "price": "380.000đ",
+        "image": "https://i.postimg.cc/4xH9rFfs/Rectangle-85-21.png",
+        "category": "2"
+    },  {
+        "id": "38",
+        "name": "Sữa Rửa Mặt La Roche-Posay Effeclar Purifying Gel",
+        "price": "180.000đ",
+        "image": "https://i.postimg.cc/yNzk21py/Rectangle-85-22.png",
         "category": "2"
     },
     {

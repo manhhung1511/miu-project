@@ -12,7 +12,7 @@
 .detail_status {
   padding: 10px 4px;
   background: #FDABD2;
-  width: 13%;
+  width: 12%;
   border-radius: 7px;
   color: #FA58A6;
   margin-bottom: 10px;
@@ -35,11 +35,13 @@
 .detail_bottom-branch {
   span {
     color: black;
-    font-weight: 600;
+    // font-weight: 600;
   }
 }
 
 .detail_bottom-share {
+  display: flex;
+  align-items: center;
   span {
     color: black;
     font-weight: 600;
@@ -60,7 +62,10 @@
   display: flex;
   align-items: center;
   padding: 15px 0;
-  border-bottom: 1px solid #9999;
+  border-bottom: 1px solid #999999;
+}
+.detail_bottom-desc {
+  color: #999999;
 }
 .detail_price {
   color: #F50779;
@@ -155,7 +160,8 @@ p {
   color: #1A1A1A;
 }
 .detail_icon {
-  padding-right: 20px;
+  margin-top: 5px;
+  padding-right: 30px;
 }
 
 @media screen and (max-width: 565px)  {

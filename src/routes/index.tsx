@@ -24,6 +24,7 @@ import Account2Page from "core/app/pages/Account2Page";
 import Account1Page from "core/app/pages/Account1Page ";
 import DetailNewPage from "core/app/pages/DetailNewPage ";
 import SearchPage from "core/app/pages/SearchPage";
+import DetailAccountPage from "core/app/pages/DetailAccount";
 
 
 const publicRoutes: PublicRoutes[] = [
@@ -106,7 +107,7 @@ const publicRoutes: PublicRoutes[] = [
   },
   {
     path: routeConfig.detailAccount,
-    component: memo(DetailNewPage),
+    component: memo(DetailAccountPage),
   },
 ];
 

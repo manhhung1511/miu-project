@@ -250,7 +250,7 @@ const Footer = () => {
             <Grid container spacing={2}>
               <Grid item sm={4} xs={12}>
                 <div className={cx("footer_main")}>
-                  <h4>Về MiBeauty</h4>
+                  <h4 style={{fontSize: "21px" , marginBottom: "18px"}}>Về MiBeauty</h4>
                   <p className={cx("text_p")}>
                     Chúng tôi tự hào cung cấp cho bạn những sản phẩm chất lượng
                     từ các thương hiệu nổi tiếng hàng đầu trên thị trường.
@@ -265,10 +265,21 @@ const Footer = () => {
                     trang web của chúng tôi!
                   </p>
                 </div>
+                <div style={{display: 'flex', marginTop: "35px"}}>
+                <p style={{marginRight: "10px", color: "#FFFF"}}>
+                 0343281206
+                  </p>
+                  <p style={{marginRight: "10px", color: "#7F7F7F"}}>
+                    hoặc
+                  </p>
+                  <p style={{marginRight: "10px", color: "#FFFF"}}>
+                  info.mibeauty@gmail.com
+                  </p>
+                </div>
               </Grid>
               <Grid item sm={2} xs={4}>
                 <div className={cx("footer_main")}>
-                  <h4>Tài khoản</h4>
+                  <h4 style={{fontSize: "21px", marginBottom: "18px"}}>Tài khoản</h4>
                   <p className={cx("text_p")}>
                     <Link to="/" className={cx("footer_link")}>
                       Tài khoản của tôi
@@ -293,17 +304,17 @@ const Footer = () => {
               </Grid>
               <Grid item sm={3} xs={4}>
                 <div className={cx("footer_main")}>
-                  <h4>Hỗ trợ</h4>
+                  <h4 style={{fontSize: "21px", marginBottom: "18px"}}>Hỗ trợ</h4>
                   <p className={cx("text_p")}>Liên hệ</p>
                   <p className={cx("text_p")}>Câu hỏi thường gặp</p>
                 </div>
               </Grid>
               <Grid item sm={3} xs={4}>
                 <div className={cx("footer_main")}>
-                  <h4>Tải về ứng dụng</h4>
+                  <h4 style={{fontSize: "21px" , marginBottom: "18px"}}>Tải về ứng dụng</h4>
 
                   <Box
-                    sx={{ display: {sm:"flex", xs: "grid"}, justifyContent: "space-between" }}
+                    sx={{ display: {sm:"flex", xs: "grid"}, justifyContent: "space-between", alignItems: "center"}}
                   >
                     <Box style={{ display: "flex", color: "#7F7F7F" }} sx={{padding: {xs: "20px 0px", sm: "0px"}}}>
                       <svg
@@ -320,7 +331,7 @@ const Footer = () => {
                       </svg>
                       <p style={{marginLeft: "10px", color: "#FFF"}} className={cx("text_p")}> App Store</p>
                     </Box>
-                    <div style={{ display: "flex", color: "#7F7F7F" }}>
+                    <div style={{ display: "flex", color: "#7F7F7F", alignItems: "center" }}>
                       <svg
                         width="22"
                         height="25"
@@ -340,6 +351,7 @@ const Footer = () => {
               </Grid>
             </Grid>
           </Box>
+        
           <div className={cx("footer_bottom")}>
             <div className={cx("footer_bottom-left")}>
               <p className={cx("text_p")}>
@@ -498,6 +510,16 @@ const Footer = () => {
                     fill="#FD6020"
                   />
                 </svg>
+              </p>
+              <p className={cx("text_p")}>
+              <svg width="45" height="32" viewBox="0 0 45 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.5" y="0.5" width="44" height="30.7647" rx="4.79412" fill="#1A1A1A" stroke="#333333"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M22.7369 22.2741C21.1698 23.5951 19.1369 24.3925 16.9156 24.3925C11.9592 24.3925 7.94116 20.4223 7.94116 15.5249C7.94116 10.6274 11.9592 6.65723 16.9156 6.65723C19.1369 6.65723 21.1698 7.45467 22.7369 8.77564C24.3041 7.45468 26.3369 6.65725 28.5582 6.65725C33.5147 6.65725 37.5327 10.6274 37.5327 15.5249C37.5327 20.4224 33.5147 24.3925 28.5582 24.3925C26.3369 24.3925 24.304 23.5951 22.7369 22.2741Z" fill="#ED0006"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M22.7368 22.2742C24.6665 20.6477 25.89 18.2275 25.89 15.5249C25.89 12.8223 24.6665 10.402 22.7368 8.77555C24.3039 7.45464 26.3367 6.65723 28.558 6.65723C33.5145 6.65723 37.5325 10.6274 37.5325 15.5249C37.5325 20.4223 33.5145 24.3925 28.558 24.3925C26.3367 24.3925 24.3039 23.5951 22.7368 22.2742Z" fill="#F9A000"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M22.7369 22.2744C24.6665 20.6479 25.89 18.2277 25.89 15.5251C25.89 12.8226 24.6665 10.4024 22.7369 8.77588C20.8073 10.4024 19.5837 12.8226 19.5837 15.5251C19.5837 18.2277 20.8073 20.6479 22.7369 22.2744Z" fill="#FF5E00"/>
+</svg>
+
+
               </p>
             </div>
           </div>

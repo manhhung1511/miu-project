@@ -195,22 +195,14 @@ export default function DetailPage() {
                           <span>Thương Hiệu: </span> URIAGE
                         </p>
                         <p className={cx("detail_bottom-share")}>
-                          <span>Chia sẻ: </span>
-                          <span className={cx("detail_icon")}>
-                            <svg
-                              width="9"
-                              height="19"
-                              viewBox="0 0 9 19"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M7.3575 3.48875H9.00075V0.62675C8.71725 0.58775 7.74225 0.5 6.60675 0.5C4.2375 0.5 2.6145 1.99025 2.6145 4.72925V7.25H0V10.4495H2.6145V18.5H5.82V10.4503H8.32875L8.727 7.25075H5.81925V5.0465C5.82 4.12175 6.069 3.48875 7.3575 3.48875Z"
-                                fill="#B3B3B3"
-                              />
-                            </svg>
-                          </span>
-                          <span className={cx("detail_icon")}>
+                          <p style={{marginRight: "15px", color: "#1A1A1A"}}>Chia sẻ: </p>
+                          <p className={cx("detail_icon")}>
+                          <svg width="9" height="19" viewBox="0 0 9 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.3575 3.48875H9.00075V0.62675C8.71725 0.58775 7.74225 0.5 6.60675 0.5C4.2375 0.5 2.6145 1.99025 2.6145 4.72925V7.25H0V10.4495H2.6145V18.5H5.82V10.4503H8.32875L8.727 7.25075H5.81925V5.0465C5.82 4.12175 6.069 3.48875 7.3575 3.48875Z" fill="#B3B3B3"/>
+</svg>
+
+                          </p>
+                          <p className={cx("detail_icon")}>
                             <svg
                               width="18"
                               height="16"
@@ -223,8 +215,8 @@ export default function DetailPage() {
                                 fill="#B3B3B3"
                               />
                             </svg>
-                          </span>
-                          <span className={cx("detail_icon")}>
+                          </p>
+                          <p className={cx("detail_icon")}>
                             <svg
                               width="15"
                               height="19"
@@ -237,15 +229,15 @@ export default function DetailPage() {
                                 fill="#B3B3B3"
                               />
                             </svg>
-                          </span>
-                          <span className={cx("detail_icon")}>
+                          </p>
+                          <p className={cx("detail_icon")}>
                           <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M17.9507 5.79205C17.9086 4.83564 17.7539 4.17812 17.5324 3.60836C17.3038 3.00359 16.9522 2.46213 16.4915 2.01201C16.0414 1.55489 15.4963 1.19969 14.8986 0.974702C14.3255 0.753147 13.6714 0.598484 12.715 0.556316C11.7515 0.510576 11.4456 0.5 9.00174 0.5C6.55791 0.5 6.25202 0.510576 5.29204 0.552745C4.33563 0.594913 3.67811 0.749713 3.1085 0.971131C2.50358 1.19969 1.96213 1.55132 1.51201 2.01201C1.05489 2.46213 0.699827 3.00716 0.474701 3.60493C0.253147 4.17812 0.098484 4.83207 0.0563158 5.78848C0.0105764 6.75203 0 7.05792 0 9.50176C0 11.9456 0.0105764 12.2515 0.0527446 13.2115C0.0949128 14.1679 0.249713 14.8254 0.471267 15.3952C0.699827 15.9999 1.05489 16.5414 1.51201 16.9915C1.96213 17.4486 2.50715 17.8038 3.10493 18.0288C3.67811 18.2504 4.33206 18.405 5.28861 18.4472C6.24845 18.4895 6.55448 18.4999 8.99831 18.4999C11.4421 18.4999 11.748 18.4895 12.708 18.4472C13.6644 18.405 14.3219 18.2504 14.8916 18.0288C16.1012 17.5611 17.0577 16.6047 17.5254 15.3952C17.7468 14.822 17.9016 14.1679 17.9437 13.2115C17.9859 12.2515 17.9965 11.9456 17.9965 9.50176C17.9965 7.05792 17.9929 6.75203 17.9507 5.79205ZM16.3298 13.1411C16.2911 14.0202 16.1434 14.4949 16.0203 14.8114C15.7179 15.5956 15.0955 16.2179 14.3114 16.5204C13.9949 16.6434 13.5168 16.7911 12.6411 16.8297C11.6917 16.872 11.407 16.8824 9.00532 16.8824C6.60365 16.8824 6.31534 16.872 5.36937 16.8297C4.4903 16.7911 4.01559 16.6434 3.69913 16.5204C3.3089 16.3761 2.9537 16.1476 2.66539 15.8487C2.3665 15.5568 2.13794 15.2052 1.99372 14.815C1.87065 14.4985 1.72299 14.0202 1.68439 13.1447C1.64209 12.1953 1.63165 11.9104 1.63165 9.50876C1.63165 7.10709 1.64209 6.81878 1.68439 5.87295C1.72299 4.99387 1.87065 4.51917 1.99372 4.2027C2.13794 3.81234 2.3665 3.45727 2.66896 3.16883C2.9607 2.86994 3.31233 2.64138 3.7027 2.49729C4.01917 2.37422 4.49744 2.22656 5.37294 2.18783C6.32235 2.14566 6.60722 2.13508 9.00875 2.13508C11.414 2.13508 11.6987 2.14566 12.6447 2.18783C13.5238 2.22656 13.9985 2.37422 14.3149 2.49729C14.7052 2.64138 15.0604 2.86994 15.3487 3.16883C15.6476 3.46071 15.8761 3.81234 16.0203 4.2027C16.1434 4.51917 16.2911 4.99731 16.3298 5.87295C16.372 6.82236 16.3826 7.10709 16.3826 9.50876C16.3826 11.9104 16.372 12.1917 16.3298 13.1411Z" fill="#B3B3B3"/>
 <path d="M9.00188 4.87793C6.44912 4.87793 4.37793 6.94898 4.37793 9.50188C4.37793 12.0548 6.44912 14.1258 9.00188 14.1258C11.5548 14.1258 13.6258 12.0548 13.6258 9.50188C13.6258 6.94898 11.5548 4.87793 9.00188 4.87793ZM9.00188 12.5013C7.34578 12.5013 6.00244 11.1581 6.00244 9.50188C6.00244 7.84564 7.34578 6.50244 9.00188 6.50244C10.6581 6.50244 12.0013 7.84564 12.0013 9.50188C12.0013 11.1581 10.6581 12.5013 9.00188 12.5013Z" fill="#B3B3B3"/>
 <path d="M14.8881 4.69472C14.8881 5.29084 14.4048 5.7742 13.8085 5.7742C13.2124 5.7742 12.729 5.29084 12.729 4.69472C12.729 4.09845 13.2124 3.61523 13.8085 3.61523C14.4048 3.61523 14.8881 4.09845 14.8881 4.69472Z" fill="#B3B3B3"/>
 </svg>
 
-                          </span>
+                          </p>
                         </p>
                       </div>
                       <p className={cx("detail_bottom-desc")}>
@@ -562,6 +554,129 @@ export default function DetailPage() {
                 </p>
                 <p>Được tăng cường bởi nước khoáng Uriage làm dịu, dưỡng ẩm </p>
               </li>
+            </ul>
+            <p style={{padding: "12px 0", fontWeight:"600", fontSize: "18px"}}>
+            Hướng dẫn sử dụng
+            </p>
+            <ul className={cx("infor_list")}>
+              <li className={cx("infor_item")}>
+                <p className={cx("infor_icon")}>
+                  <svg
+                    width="20"
+                    height="21"
+                    viewBox="0 0 20 21"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_268_7352)">
+                      <rect
+                        y="0.5"
+                        width="20"
+                        height="20"
+                        rx="10"
+                        fill="#FA58A6"
+                      />
+                      <path
+                        d="M14.4168 7.625L8.68766 13.3542L6.0835 10.75"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_268_7352">
+                        <rect
+                          width="20"
+                          height="20"
+                          fill="white"
+                          transform="translate(0 0.5)"
+                        />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </p>
+                <p>Sử dụng sáng và tối trên làn da sạch sau bước làm sạch, cân bằng da</p>
+              </li>
+              <li className={cx("infor_item")}>
+                <p className={cx("infor_icon")}>
+                  <svg
+                    width="20"
+                    height="21"
+                    viewBox="0 0 20 21"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_268_7352)">
+                      <rect
+                        y="0.5"
+                        width="20"
+                        height="20"
+                        rx="10"
+                        fill="#FA58A6"
+                      />
+                      <path
+                        d="M14.4168 7.625L8.68766 13.3542L6.0835 10.75"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_268_7352">
+                        <rect
+                          width="20"
+                          height="20"
+                          fill="white"
+                          transform="translate(0 0.5)"
+                        />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </p>
+                <p>Không trang điểm trước khi sử dụng</p>
+              </li>
+              <li className={cx("infor_item")}>
+                <p className={cx("infor_icon")}>
+                  <svg
+                    width="20"
+                    height="21"
+                    viewBox="0 0 20 21"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_268_7352)">
+                      <rect
+                        y="0.5"
+                        width="20"
+                        height="20"
+                        rx="10"
+                        fill="#FA58A6"
+                      />
+                      <path
+                        d="M14.4168 7.625L8.68766 13.3542L6.0835 10.75"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_268_7352">
+                        <rect
+                          width="20"
+                          height="20"
+                          fill="white"
+                          transform="translate(0 0.5)"
+                        />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </p>
+                <p>Thoa sản phẩm trên toàn bộ gương mặt, cổ hoặc tay</p>
+              </li>
+            
             </ul>
           </Grid>
           <Grid item sm={5}>
