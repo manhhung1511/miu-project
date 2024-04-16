@@ -159,11 +159,6 @@ export default function Login() {
                     <Link to="/register" variant="body2">
                       {t("login.body2")}
                     </Link>
-                    <div>
-                      <Link to="/admin/login" variant="body2">
-                        Đăng nhập Admin
-                      </Link>
-                    </div>
                   </Grid>
                 </Grid>
               </Box>
