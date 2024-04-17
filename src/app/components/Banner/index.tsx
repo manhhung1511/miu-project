@@ -185,6 +185,8 @@ export default function Banner() {
               width: "92%",
               left: "4%",
               borderRadius: "10px",
+              boxShadow:
+                "0px 3px 5px -1px rgba(0,0,0,0.14), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.09)",
             }}
           >
             <div className="banner-bottom-mobile">
@@ -336,5 +338,13 @@ const Wrapper = styled.div`
   .swiper-horizontal > .swiper-pagination-bullets,
   .swiper-pagination-bullets.swiper-pagination-horizontal {
     bottom: var(--swiper-pagination-bottom, 80px);
+  }
+  @media screen and (max-width: 565px) {
+    .swiper-pagination-fraction,
+    .swiper-pagination-custom,
+    .swiper-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal {
+      bottom: var(--swiper-pagination-bottom, 24px);
+    }
   }
 `;

@@ -1,6 +1,7 @@
 import classNames from "classnames/bind";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useShallow } from "zustand/react/shallow";
 
 import {
   Box,
@@ -21,10 +22,11 @@ import DialogTitle from "@mui/material/DialogTitle";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 
+import Breadcrumb from "core/app/components/Breadcrumb";
+import { useCartStore } from "core/store/useCartStore";
+
 import products from "../../../datas/product.json";
 import styles from "./BuyPage.module.scss";
-import { useCartStore } from "core/store/useCartStore";
-import { useShallow } from "zustand/react/shallow";
 
 const cx = classNames.bind(styles);
 
@@ -106,24 +108,14 @@ export default function BuyPage() {
   return (
     <Box
       sx={{
-        marginTop: { sm: "110px", xs: "70px" },
+        marginTop: { sm: "104px", xs: "67px" },
         paddingTop: { sm: "78px", xs: "10px" },
         // maxWidth: "45%"
       }}
     >
-      <Box
-        style={{ background: "#FBD5E0" }}
-        sx={{ padding: { sm: "20px 0", xs: "5px 0" } }}
-      >
-        <Container maxWidth="lg">
-          <Stack spacing={2}>
-            <Breadcrumbs separator="›" aria-label="breadcrumb">
-              {breadcrumbs}
-            </Breadcrumbs>
-          </Stack>
-        </Container>
-      </Box>
-      <Container maxWidth="lg">
+      <Breadcrumb breadcrumbs={breadcrumbs} />
+
+      <Container maxWidth="lg" sx={{ marginTop: "50px" }}>
         <Grid container spacing={2}>
           <Grid item sm={7}>
             <Typography
@@ -334,7 +326,7 @@ export default function BuyPage() {
           aria-describedby="alert-dialog-description"
           sx={{ padding: "20px 30px !important" }}
         >
-          <p>
+          <Box sx={{ display: { sm: "flex", xs: "none" } }}>
             <svg
               width="368"
               height="196"
@@ -580,11 +572,261 @@ export default function BuyPage() {
                 </filter>
               </defs>
             </svg>
-          </p>
+          </Box>
+
+          <Box sx={{ display: { sm: "none", xs: "flex" } }}>
+            <p style={{ margin: "0 auto" }}>
+              <svg
+                width="158"
+                height="83"
+                viewBox="0 0 158 83"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g filter="url(#filter0_d_799_7921)">
+                  <mask id="path-1-inside-1_799_7921" fill="white">
+                    <path d="M104.62 34.935C105.998 40.0875 105.508 45.5616 103.236 50.3872C100.964 55.2129 97.0575 59.0786 92.2082 61.2995C87.3589 63.5204 81.8801 63.9531 76.7423 62.5209C71.6045 61.0887 67.1395 57.8841 64.1385 53.4749C61.1374 49.0656 59.794 43.7364 60.3462 38.4314C60.8984 33.1264 63.3106 28.1882 67.1555 24.4916C71.0003 20.7949 76.0296 18.5786 81.3522 18.2353C86.6747 17.892 91.9471 19.4438 96.235 22.6158L94.0806 25.5281C90.4806 22.8649 86.0541 21.5621 81.5853 21.8503C77.1166 22.1386 72.8942 23.9993 69.6661 27.1029C66.4381 30.2065 64.4129 34.3525 63.9492 38.8065C63.4856 43.2604 64.6135 47.7347 67.1331 51.4366C69.6528 55.1385 73.4015 57.829 77.715 59.0314C82.0285 60.2339 86.6285 59.8706 90.6998 58.006C94.7711 56.1414 98.051 52.8958 99.9584 48.8443C101.866 44.7928 102.277 40.1969 101.12 35.871L104.62 34.935Z" />
+                  </mask>
+                  <path
+                    d="M104.62 34.935C105.998 40.0875 105.508 45.5616 103.236 50.3872C100.964 55.2129 97.0575 59.0786 92.2082 61.2995C87.3589 63.5204 81.8801 63.9531 76.7423 62.5209C71.6045 61.0887 67.1395 57.8841 64.1385 53.4749C61.1374 49.0656 59.794 43.7364 60.3462 38.4314C60.8984 33.1264 63.3106 28.1882 67.1555 24.4916C71.0003 20.7949 76.0296 18.5786 81.3522 18.2353C86.6747 17.892 91.9471 19.4438 96.235 22.6158L94.0806 25.5281C90.4806 22.8649 86.0541 21.5621 81.5853 21.8503C77.1166 22.1386 72.8942 23.9993 69.6661 27.1029C66.4381 30.2065 64.4129 34.3525 63.9492 38.8065C63.4856 43.2604 64.6135 47.7347 67.1331 51.4366C69.6528 55.1385 73.4015 57.829 77.715 59.0314C82.0285 60.2339 86.6285 59.8706 90.6998 58.006C94.7711 56.1414 98.051 52.8958 99.9584 48.8443C101.866 44.7928 102.277 40.1969 101.12 35.871L104.62 34.935Z"
+                    fill="#FA58A6"
+                  />
+                  <path
+                    d="M104.62 34.935C105.998 40.0875 105.508 45.5616 103.236 50.3872C100.964 55.2129 97.0575 59.0786 92.2082 61.2995C87.3589 63.5204 81.8801 63.9531 76.7423 62.5209C71.6045 61.0887 67.1395 57.8841 64.1385 53.4749C61.1374 49.0656 59.794 43.7364 60.3462 38.4314C60.8984 33.1264 63.3106 28.1882 67.1555 24.4916C71.0003 20.7949 76.0296 18.5786 81.3522 18.2353C86.6747 17.892 91.9471 19.4438 96.235 22.6158L94.0806 25.5281C90.4806 22.8649 86.0541 21.5621 81.5853 21.8503C77.1166 22.1386 72.8942 23.9993 69.6661 27.1029C66.4381 30.2065 64.4129 34.3525 63.9492 38.8065C63.4856 43.2604 64.6135 47.7347 67.1331 51.4366C69.6528 55.1385 73.4015 57.829 77.715 59.0314C82.0285 60.2339 86.6285 59.8706 90.6998 58.006C94.7711 56.1414 98.051 52.8958 99.9584 48.8443C101.866 44.7928 102.277 40.1969 101.12 35.871L104.62 34.935Z"
+                    stroke="#FDABD2"
+                    stroke-width="0.6"
+                    mask="url(#path-1-inside-1_799_7921)"
+                  />
+                </g>
+                <g filter="url(#filter1_d_799_7921)">
+                  <path
+                    d="M26.3823 47.9116L14.7691 39.5911"
+                    stroke="#FA58A6"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M28.9629 26.8608L17.3497 18.5404"
+                    stroke="#FA58A6"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M24.7703 35.3059L13.1571 26.9854"
+                    stroke="#FA58A6"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+                <g filter="url(#filter2_d_799_7921)">
+                  <path
+                    d="M139.479 47.9116L151.092 39.5911"
+                    stroke="#F50779"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M136.9 26.8608L148.513 18.5404"
+                    stroke="#F50779"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M141.093 35.3059L152.706 26.9854"
+                    stroke="#F50779"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+                <path
+                  d="M6.31198 15.8347L6.12928 18.2909L7.99176 19.7533L5.66481 20.433L4.81008 22.7641L3.55467 20.728L1.16277 20.7089L2.71391 18.7702L2.08996 16.4277L4.30562 17.2633L6.31198 15.8347Z"
+                  fill="#F46242"
+                  stroke="#F46242"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M138.9 74.7822L138.717 77.2384L140.58 78.7008L138.253 79.3805L137.398 81.7116L136.143 79.6755L133.751 79.6564L135.302 77.7177L134.678 75.3752L136.894 76.2108L138.9 74.7822Z"
+                  fill="#F46242"
+                  stroke="#F46242"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M98.4917 1.66278L98.309 4.11902L100.171 5.5814L97.8445 6.26114L96.9898 8.59218L95.7344 6.55612L93.3425 6.53698L94.8936 4.59837L94.2696 2.25584L96.4853 3.09142L98.4917 1.66278Z"
+                  fill="#F46242"
+                  stroke="#F46242"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <g filter="url(#filter3_d_799_7921)">
+                  <path
+                    d="M92.4534 33.6582L80.2951 45.6382L74.7686 40.1928"
+                    stroke="#FA58A6"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    shape-rendering="crispEdges"
+                  />
+                </g>
+                <defs>
+                  <filter
+                    id="filter0_d_799_7921"
+                    x="52.2249"
+                    y="14.1885"
+                    width="61.1616"
+                    height="61.1616"
+                    filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB"
+                  >
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix
+                      in="SourceAlpha"
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha"
+                    />
+                    <feOffset dy="4" />
+                    <feGaussianBlur stdDeviation="4" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix
+                      type="matrix"
+                      values="0 0 0 0 0.980392 0 0 0 0 0.345098 0 0 0 0 0.65098 0 0 0 1 0"
+                    />
+                    <feBlend
+                      mode="normal"
+                      in2="BackgroundImageFix"
+                      result="effect1_dropShadow_799_7921"
+                    />
+                    <feBlend
+                      mode="normal"
+                      in="SourceGraphic"
+                      in2="effect1_dropShadow_799_7921"
+                      result="shape"
+                    />
+                  </filter>
+                  <filter
+                    id="filter1_d_799_7921"
+                    x="8.33496"
+                    y="17.3894"
+                    width="25.45"
+                    height="39.6733"
+                    filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB"
+                  >
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix
+                      in="SourceAlpha"
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha"
+                    />
+                    <feOffset dy="4" />
+                    <feGaussianBlur stdDeviation="2" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix
+                      type="matrix"
+                      values="0 0 0 0 0.980392 0 0 0 0 0.345098 0 0 0 0 0.65098 0 0 0 1 0"
+                    />
+                    <feBlend
+                      mode="normal"
+                      in2="BackgroundImageFix"
+                      result="effect1_dropShadow_799_7921"
+                    />
+                    <feBlend
+                      mode="normal"
+                      in="SourceGraphic"
+                      in2="effect1_dropShadow_799_7921"
+                      result="shape"
+                    />
+                  </filter>
+                  <filter
+                    id="filter2_d_799_7921"
+                    x="132.078"
+                    y="17.3894"
+                    width="25.4507"
+                    height="39.6733"
+                    filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB"
+                  >
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix
+                      in="SourceAlpha"
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha"
+                    />
+                    <feOffset dy="4" />
+                    <feGaussianBlur stdDeviation="2" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix
+                      type="matrix"
+                      values="0 0 0 0 0.980392 0 0 0 0 0.345098 0 0 0 0 0.65098 0 0 0 1 0"
+                    />
+                    <feBlend
+                      mode="normal"
+                      in2="BackgroundImageFix"
+                      result="effect1_dropShadow_799_7921"
+                    />
+                    <feBlend
+                      mode="normal"
+                      in="SourceGraphic"
+                      in2="effect1_dropShadow_799_7921"
+                      result="shape"
+                    />
+                  </filter>
+                  <filter
+                    id="filter3_d_799_7921"
+                    x="69.7686"
+                    y="32.6582"
+                    width="27.6848"
+                    height="21.98"
+                    filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB"
+                  >
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix
+                      in="SourceAlpha"
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha"
+                    />
+                    <feOffset dy="4" />
+                    <feGaussianBlur stdDeviation="2" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix
+                      type="matrix"
+                      values="0 0 0 0 0.980392 0 0 0 0 0.345098 0 0 0 0 0.65098 0 0 0 1 0"
+                    />
+                    <feBlend
+                      mode="normal"
+                      in2="BackgroundImageFix"
+                      result="effect1_dropShadow_799_7921"
+                    />
+                    <feBlend
+                      mode="normal"
+                      in="SourceGraphic"
+                      in2="effect1_dropShadow_799_7921"
+                      result="shape"
+                    />
+                  </filter>
+                </defs>
+              </svg>
+            </p>
+          </Box>
           <DialogTitle
             id="alert-dialog-title"
             sx={{
-              fontSize: "30px",
+              fontSize: { sm: "30px", xs: "19px" },
               textAlign: "center",
               fontWeight: "600",
               color: "#FA58A6",
@@ -593,19 +835,73 @@ export default function BuyPage() {
             Đặt hàng thành công
           </DialogTitle>
           <DialogContent>
-            <DialogContentText id="alert-dialog-description">
-              <Typography variant="h3"></Typography>
-              <p style={{ textAlign: "center" }}>
-                Cảm ơn quý khách đã tin tưởng MiBeauty
-              </p>
-            </DialogContentText>
+            <Typography variant="h3"></Typography>
+            <Typography
+              sx={{ fontSize: { sm: "18px", xs: "15px" } }}
+              variant="h5"
+              style={{ textAlign: "center" }}
+            >
+              Cảm ơn quý khách đã tin tưởng MiBeauty
+            </Typography>
           </DialogContent>
           <DialogActions>
-          <Button onClick={handleClose} style={{ borderRadius: "20px", padding:"10px 20px" }}>
-              <Link to="/" style={{ color: "#FFF" }}>
-             Tiếp tục mua hàng
-              </Link>
-            </Button>
+            <div style={{ display: "flex" }}>
+              <div>
+                <Button
+                  onClick={handleClose}
+                  sx={{
+                    borderRadius: "20px",
+                    padding: { sm: "10px 20px", xs: "6px 4px" },
+                    marginRight: {sm: "45px", xs: "10px"},
+                  }}
+                >
+                  <Link to="/" style={{ color: "#FFF" }}>
+                    <Typography
+                      variant="p"
+                      sx={{ fontSize: { sm: "18px", xs: "12px" } }}
+                    >
+                      Về trang chủ
+                    </Typography>
+                  </Link>
+                </Button>
+              </div>
+              <div>
+                <Button
+                  onClick={handleClose}
+                  sx={{
+                    borderRadius: "20px",
+                    padding: { sm: "10px 20px", xs: "6px 4px" },
+                    display: {sm: "block", xs: "none"},
+                  }}
+                >
+                  <Link to="/history" style={{ color: "#FFF" }}>
+                    <Typography
+                      variant="p"
+                      sx={{ fontSize: { sm: "18px", xs: "12px" } }}
+                    >
+                      Xem đơn hàng
+                    </Typography>
+                  </Link>
+                </Button>
+                <Button
+                  onClick={handleClose}
+                  sx={{
+                    borderRadius: "20px",
+                    padding: { sm: "10px 20px", xs: "6px 4px" },
+                    display: {sm: "none", xs: "block"},
+                  }}
+                >
+                  <Link to="/account/order" style={{ color: "#FFF" }}>
+                    <Typography
+                      variant="p"
+                      sx={{ fontSize: { sm: "18px", xs: "12px" } }}
+                    >
+                      Xem đơn hàng
+                    </Typography>
+                  </Link>
+                </Button>
+              </div>
+            </div>
           </DialogActions>
         </Dialog>
       </Container>

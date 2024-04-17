@@ -19,6 +19,7 @@ import { DataGrid, GridColDef } from "@mui/x-data-grid";
 
 import products from "../../../datas/product.json";
 import styles from "./LikePage.module.scss";
+import Breadcrumb from "core/app/components/Breadcrumb";
 
 const cx = classNames.bind(styles);
 
@@ -78,24 +79,14 @@ export default function LikePage() {
   return (
     <Box
     sx={{
-      marginTop: { sm: "110px", xs: "70px" },
+      marginTop: { sm: "104px", xs: "67px" },
       paddingTop: { sm: "78px", xs: "10px" },
       // maxWidth: "45%"
     }}
   >
-      <Box
-        style={{ background: "#FBD5E0" }}
-        sx={{ padding: { sm: "20px 0", xs: "5px 0" } }}
-      >
-        <Container maxWidth="lg">
-          <Stack spacing={2}>
-            <Breadcrumbs separator="›" aria-label="breadcrumb">
-              {breadcrumbs}
-            </Breadcrumbs>
-          </Stack>
-        </Container>
-      </Box>
-      <Container maxWidth="lg" sx={{ paddingTop: {sm: "40px", xs: "20px 5px" } }}>
+             <Breadcrumb breadcrumbs={breadcrumbs} />
+      
+      <Container maxWidth="lg" sx={{ paddingTop: {sm: "40px", xs: "20px 5px", marginTop:"30px" } }}>
       <Typography variant="h3" sx={{fontSize: {sm: "24px", xs: "20px"}, fontWeight:'600', padding: '20px 0'}}> Danh sách yêu thích</Typography>
 
         {/* <h3 style={{ textAlign: "center", marginBottom: "40px" }}>

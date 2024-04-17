@@ -13,6 +13,7 @@ import Typography from "@mui/material/Typography";
 import introduce from "../../../assets/images/introduce.png"
 
 import styles from "./IntroducePage.module.scss";
+import Breadcrumb from "core/app/components/Breadcrumb";
 
 const cx = classNames.bind(styles);
 
@@ -52,24 +53,13 @@ export default function IntroducePage() {
   return (
     <Box
       sx={{
-        marginTop: { sm: "110px", xs: "70px" },
+        marginTop: { sm: "104px", xs: "67px" },
         paddingTop: { sm: "78px", xs: "10px" },
         // maxWidth: "45%"
       }}
     >
-     <Box
-        style={{ background: "#FBD5E0" }}
-        sx={{ padding: { sm: "20px 0", xs: "5px 0" } }}
-      >
-        <Container maxWidth="lg">
-          <Stack spacing={2}>
-            <Breadcrumbs separator="›" aria-label="breadcrumb">
-              {breadcrumbs}
-            </Breadcrumbs>
-          </Stack>
-        </Container>
-      </Box>
-      <Container maxWidth="lg" sx={{ padding: "20px 8px" }}>
+        <Breadcrumb breadcrumbs={breadcrumbs} />
+      <Container maxWidth="lg" sx={{ padding: "20px 8px",marginTop: {sm: "60px", xs: "30px"}}}>
         <Grid container spacing={2}>
           <Grid item sm={6} sx={{ padding: {sm: "90px 90px 90px 20px", xs: "0"} }}>
             <h3 className={cx("introduct_title")}>

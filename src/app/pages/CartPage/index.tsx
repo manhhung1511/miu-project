@@ -21,6 +21,7 @@ import products from "../../../datas/product.json";
 import styles from "./CartPage.module.scss";
 import { useCartStore } from "core/store/useCartStore";
 import { useShallow } from "zustand/react/shallow";
+import Breadcrumb from "core/app/components/Breadcrumb";
 
 const cx = classNames.bind(styles);
 
@@ -124,26 +125,16 @@ export default function CartPage() {
   return (
     <Box
       sx={{
-        marginTop: { sm: "110px", xs: "70px" },
+        marginTop: { sm: "104px", xs: "67px" },
         paddingTop: { sm: "78px", xs: "10px" },
         // maxWidth: "45%"
       }}
     >
-       <Box
-        style={{ background: "#FBD5E0" }}
-        sx={{ padding: { sm: "20px 0", xs: "5px 0" } }}
-      >
-        <Container maxWidth="lg">
-          <Stack spacing={2}>
-            <Breadcrumbs separator="›" aria-label="breadcrumb">
-              {breadcrumbs}
-            </Breadcrumbs>
-          </Stack>
-        </Container>
-      </Box>
+                 <Breadcrumb breadcrumbs={breadcrumbs} />
+
       <Container
         maxWidth="lg"
-        sx={{ padding: { sm: "40px 20px", xs: "20px 5px" } }}
+        sx={{ padding: { sm: "40px 20px", xs: "20px 5px" }, marginTop: {sm: "40px", xs: "15px"} }}
       >
         <Typography
           variant="h3"

@@ -9,6 +9,7 @@ export const routeConfig = {
   cart: "/cart",
   like: "/like",
   account: "/account",
+  history: "/history",
   news: "/news",
   introduce: "/introduce",
   contact: "/contact",

@@ -11,6 +11,12 @@ import {
 } from "core/localstorages/recentSearches";
 import { useNavigate } from "react-router-dom";
 
+
+// Top 100 films as rated by IMDb users. http://www.imdb.com/chart/top
+const top100Films = [
+  { title: 'La Roche Posay', year: 1994 },
+];
+
 export default function Grouped() {
   const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = React.useState({
@@ -23,8 +29,19 @@ export default function Grouped() {
   };
   return (
     <Wrapper>
-      <Autocomplete
-      size="small"
+       <Autocomplete
+        size="small"
+        id="free-solo-demo"
+        freeSolo
+        options={top100Films.map((option) => option.title)}
+        renderInput={(params) => <TextField {...params} label="Tìm sản phẩm" />}
+        sx={{
+          width: "600px",
+          fontSize: { xs: "13px" },
+          display: { xs: "none", sm: "block" },
+        }}
+      />
+      {/* <Autocomplete
         id="free-solo-demo"
         freeSolo
         options={Array.from(getRecentSearches())
@@ -45,10 +62,10 @@ export default function Grouped() {
         sx={{
           width: "600px",
           fontSize: { xs: "13px" },
-          display: { xs: "none", lg: "block" },
+          display: { xs: "none", sm: "block" },
         }}
         value={searchTerm.keyword}
-      />
+      /> */}
 
       <Grid
         item
@@ -78,3 +95,5 @@ const Wrapper = styled.div`
     padding: 6px;
   }
 `;
+
+

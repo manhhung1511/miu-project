@@ -261,7 +261,7 @@ function Header() {
                           style={{ color: "white", padding: "9px 0", display: "flex", alignItems: "center" }}
                           to="/account"
                         >
-                          <img src="https://i.postimg.cc/NF7spTM8/Image-19.png" alt="img" style={{marginRight: "5px"}} />
+                          <img src="https://i.postimg.cc/NF7spTM8/Image-19.png" alt="img" style={{marginRight: '10px'}} />
                           {infor?.name}
                         </Link>
                       ) : (
@@ -356,8 +356,8 @@ function Header() {
                 <div className={classes.headerNavLeft}>
                   <Link to={"/"} className={classes.headerLogo}>
                     <svg
-                      width="86"
-                      height="72"
+                      width="80"
+                      height="62"
                       viewBox="0 0 86 72"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"

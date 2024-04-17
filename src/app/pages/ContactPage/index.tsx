@@ -21,6 +21,7 @@ import bannerUrl from "core/assets/images/Image.png";
 
 import products from "../../../datas/product.json";
 import styles from "./ContactPage.module.scss";
+import Breadcrumb from "core/app/components/Breadcrumb";
 
 const cx = classNames.bind(styles);
 
@@ -60,29 +61,18 @@ export default function ContactPage() {
   return (
     <Box
       sx={{
-        marginTop: { sm: "110px", xs: "70px" },
+        marginTop: { sm: "104px", xs: "67px" },
         paddingTop: { sm: "78px", xs: "10px" },
         // maxWidth: "45%"
       }}
     >
-      <Box
-        style={{ background: "#FBD5E0" }}
-        sx={{ padding: { sm: "20px 0", xs: "5px 0" } }}
-      >
-        <Container maxWidth="lg">
-          <Stack spacing={2}>
-            <Breadcrumbs separator="›" aria-label="breadcrumb">
-              {breadcrumbs}
-            </Breadcrumbs>
-          </Stack>
-        </Container>
-      </Box>
+    <Breadcrumb breadcrumbs={breadcrumbs} />
       <Container
         maxWidth="lg"
         sx={{
           // padding: "20px",
-          marginTop: "20px",
           display: { sm: "flex", xs: "none" },
+          marginTop: { sm: "60px", xs: "60px" },
         }}
       >
         <Grid container spacing={3}>

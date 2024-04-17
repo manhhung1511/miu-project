@@ -19,11 +19,10 @@ export const HomePage = () => {
       }}
     >
       <div className={cx("banner_main")}>
-        <Container maxWidth="lg">
+        <Container maxWidth="lg" sx={{paddingLeft: {xs:"0px", sm: "16px"}, paddingRight: {xs:"0px", sm: "16px"}}}>
           <Banner />
         </Container>
       </div>
-      <Container maxWidth="lg">
         <Box
           sx={{
             marginTop: { xs: "20px", sm: "50px" },
@@ -42,7 +41,6 @@ export const HomePage = () => {
           </Typography>
           <Product />
         </Box>
-      </Container>
 
       <Box
         sx={{

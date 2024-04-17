@@ -66,7 +66,7 @@
         "id": "32",
         "name": "Sữa Rửa Mặt Innisfree Volcanic Pore",
         "price": "165.000đ",
-        "image": "https://i.postimg.cc/8C3GCbmf/Rectangle-85-1.png",
+        "image": "https://i.postimg.cc/KYkyGNBm/Rectangle-85-23.png",
         "category": "2"
     },
     {
@@ -85,7 +85,7 @@
     },
     {
         "id": "35",
-        "name": "Sữa Rửa Mặt Caryophy Glass Skin Cleansing Foam",
+        "name": "Sữa Rửa Mặt Caryophy Glass Skin ",
         "price": "270.000đ",
         "image": "https://i.postimg.cc/3wMKWtg8/Rectangle-85-19.png",
         "category": "2"
@@ -99,20 +99,20 @@
     },
     {
         "id": "37",
-        "name": "Sữa Rửa Mặt Beldora 299 Prime 5.5 Foam Cleanser",
+        "name": "Sữa Rửa Mặt Beldora 299 Prime 5.5",
         "price": "380.000đ",
         "image": "https://i.postimg.cc/4xH9rFfs/Rectangle-85-21.png",
         "category": "2"
     },  {
         "id": "38",
-        "name": "Sữa Rửa Mặt La Roche-Posay Effeclar Purifying Gel",
+        "name": "Sữa Rửa Mặt La Roche-Posay Effeclar",
         "price": "180.000đ",
         "image": "https://i.postimg.cc/yNzk21py/Rectangle-85-22.png",
         "category": "2"
     },
     {
         "id": "101",
-        "name": "URIAGE Depiderm Serum Correcteur Eclat Eclat",
+        "name": "URIAGE Depiderm Serum Correcteur",
         "price": "730.000đ",
         "image": "https://i.postimg.cc/qBKLxF4M/Image-14.png",
         "category": "10"
@@ -126,21 +126,21 @@
     },
     {
         "id": "103",
-        "name": "Toner Obagi Medical Salicylic Acid 2% Acne Treatment",
+        "name": "Toner Obagi Medical Salicylic Acid 2%",
         "price": "580.000đ",
         "image": "https://i.postimg.cc/XN2Vxs8m/Image-16.png",
         "category": "10"
     },
     {
         "id": "104",
-        "name": "Sữa Rửa Mặt SVR Sebiaclear Purifying & Exfoliating",
+        "name": "Sữa Rửa Mặt SVR Sebiaclear Purifying",
         "price": "440.000đ",
         "image": "https://i.postimg.cc/28BPvGX4/Image-17.png",
         "category": "10"
     },
     {
         "id": "105",
-        "name": "Kem Dưỡng Obagi Medical Retinol 1.0 Cream",
+        "name": "Kem Dưỡng Obagi Medical Retinol 1.0",
         "price": "440.000đ",
         "image": "https://i.postimg.cc/Lsv7RbnM/Image-18.png",
         "category": "10"

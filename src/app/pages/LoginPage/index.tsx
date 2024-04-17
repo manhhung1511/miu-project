@@ -5,7 +5,7 @@ export const LoginPage = () => {
     return (
     <Box 
       sx={{
-        marginTop: { sm: "110px", xs: "70px" },
+        marginTop: { sm: "104px", xs: "67px" },
         paddingTop: { sm: "78px", xs: "10px" },
         // maxWidth: "45%"
       }}

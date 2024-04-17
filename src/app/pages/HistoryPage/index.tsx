@@ -139,8 +139,7 @@ const rows = [
   ),
 ];
 
-
-export default function AccountPage() {
+export default function HistoryPage() {
   function handleClick(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
     event.preventDefault();
     console.info("You clicked a breadcrumb.");
@@ -174,7 +173,7 @@ export default function AccountPage() {
     </Typography>,
   ];
 
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = React.useState(1);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
@@ -438,7 +437,7 @@ export default function AccountPage() {
                       </h3>
 
                       <TableContainer component={Paper}>
-                        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                        <Table sx={{ minWidth: 550 }} aria-label="simple table">
                           <TableHead>
                             <TableRow>
                               <TableCell style={{ fontSize: "22px" }}>

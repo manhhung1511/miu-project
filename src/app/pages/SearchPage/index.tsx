@@ -24,6 +24,7 @@ import { useCartStore } from "core/store/useCartStore";
 
 import categories from "../../../datas/search.json";
 import styles from "./SearchPage.module.scss";
+import Breadcrumb from "core/app/components/Breadcrumb";
 
 const cx = classNames.bind(styles);
 
@@ -139,24 +140,13 @@ export default function SearchPage() {
   return (
     <Box
       sx={{
-        marginTop: { sm: "110px", xs: "70px" },
+        marginTop: { sm: "104px", xs: "67px" },
         paddingTop: { sm: "78px", xs: "10px" },
         // maxWidth: "45%"
       }}
     >
-      <Box
-        style={{ background: "#FBD5E0" }}
-        sx={{ padding: { sm: "20px 0", xs: "5px 0" } }}
-      >
-        <Container maxWidth="lg">
-          <Stack spacing={2}>
-            <Breadcrumbs separator="›" aria-label="breadcrumb">
-              {breadcrumbs}
-            </Breadcrumbs>
-          </Stack>
-        </Container>
-      </Box>
-      <Container maxWidth="lg" sx={{ padding: "20px 4px" }}>
+        <Breadcrumb breadcrumbs={breadcrumbs} />
+      <Container maxWidth="lg" sx={{ padding: "20px 4px", marginTop: {sm: "60px", xs: "30px"} }}>
         <Grid container spacing={{ sm: 2, xs: 1 }}>
           <Grid item sm={3}>
             <Button

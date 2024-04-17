@@ -18,6 +18,7 @@ import { styled } from "@mui/material/styles";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
 
 import styles from "./Account2Page.module.scss";
+import Breadcrumb from "core/app/components/Breadcrumb";
 
 const cx = classNames.bind(styles);
 
@@ -68,49 +69,49 @@ const rows = [
   createData(
     "4152",
     "4 TH 4, 2024",
-    "730.000 đ(1 san phẩm)",
+    "730.000 đ(1 sản phẩm)",
     "Đang xử lý",
     "Chi tiết",
   ),
   createData(
     "4152",
     "4 TH 4, 2024",
-    "730.000 đ(1 san phẩm)",
+    "730.000 đ(1 sản phẩm)",
     "Đang xử lý",
     "Chi tiết",
   ),
   createData(
     "4152",
     "4 TH 4, 2024",
-    "730.000 đ(1 san phẩm)",
+    "730.000 đ(1 sản phẩm)",
     "Đang xử lý",
     "Chi tiết",
   ),
   createData(
     "4152",
     "4 TH 4, 2024",
-    "730.000 đ(1 san phẩm)",
+    "730.000 đ(1 sản phẩm)",
     "Đang xử lý",
     "Chi tiết",
   ),
   createData(
     "4152",
     "4 TH 4, 2024",
-    "730.000 đ(1 san phẩm)",
+    "730.000 đ(1 sản phẩm)",
     "Đang xử lý",
     "Chi tiết",
   ),
   createData(
     "4152",
     "4 TH 4, 2024",
-    "730.000 đ(1 san phẩm)",
+    "730.000 đ(1 sản phẩm)",
     "Đang xử lý",
     "Chi tiết",
   ),
   createData(
     "4152",
     "4 TH 4, 2024",
-    "730.000 đ(1 san phẩm)",
+    "730.000 đ(1 sản phẩm)",
     "Đang xử lý",
     "Chi tiết",
   ),
@@ -171,32 +172,27 @@ export default function Account2Page() {
   return (
     <Box
       sx={{
-        marginTop: { sm: "110px", xs: "70px" },
+        marginTop: { sm: "104px", xs: "67px" },
         paddingTop: { sm: "78px", xs: "10px" },
         // maxWidth: "45%"
       }}
     >
-      <Container maxWidth="lg" sx={{ background: "#FBD5E0", padding: "5px 0" }}>
-        <Stack spacing={2}>
-          <Breadcrumbs separator="›" aria-label="breadcrumb">
-            {breadcrumbs}
-          </Breadcrumbs>
-        </Stack>
-      </Container>
-      <Container maxWidth="xs" sx={{ padding: "20px 5px" }}>
+             <Breadcrumb breadcrumbs={breadcrumbs} />
+     
+      <Container maxWidth="xs" sx={{ padding: "20px 5px", marginTop: "20px"  }}>
         <h3 style={{ fontSize: "20px", marginBottom: "10px" }}>
           Lịch sử đặt hàng
         </h3>
 
         <TableContainer component={Paper}>
-          <Table sx={{ minWidth: 1100 }} aria-label="simple table">
+          <Table sx={{ minWidth: 372 }} aria-label="simple table">
             <TableHead>
               <TableRow>
-                <TableCell style={{ fontSize: "22px" }}>ID</TableCell>
-                <TableCell style={{ fontSize: "22px" }}>Ngày</TableCell>
-                <TableCell style={{ fontSize: "22px" }}>Tổng tiền</TableCell>
-                <TableCell style={{ fontSize: "22px" }}>Trạng Thái</TableCell>
-                <TableCell style={{ fontSize: "22px" }}></TableCell>
+                <TableCell style={{ fontSize: "15px" }}>ID</TableCell>
+                <TableCell style={{ fontSize: "15px" }}>Ngày</TableCell>
+                <TableCell style={{ fontSize: "15px" }}>Tổng tiền</TableCell>
+                <TableCell style={{ fontSize: "15px" }}>Trạng Thái</TableCell>
+                <TableCell style={{ fontSize: "15px" }}></TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -206,20 +202,20 @@ export default function Account2Page() {
                   sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                 >
                   <TableCell
-                    style={{ fontSize: "18px" }}
+                    style={{ fontSize: "15px" }}
                     component="th"
                     scope="row"
                   >
                     {row.name}
                   </TableCell>
-                  <TableCell style={{ fontSize: "18px" }}>
+                  <TableCell style={{ fontSize: "15px" }}>
                     {row.calories}
                   </TableCell>
-                  <TableCell style={{ fontSize: "18px" }}>{row.fat}</TableCell>
-                  <TableCell style={{ fontSize: "18px" }}>
+                  <TableCell style={{ fontSize: "15px" }}>{row.fat}</TableCell>
+                  <TableCell style={{ fontSize: "15px" }}>
                     {row.carbs}
                   </TableCell>
-                  <TableCell style={{ fontSize: "18px" }}>
+                  <TableCell style={{ fontSize: "15px" }}>
                     <Link to="/chi-tiet-tai-khoan" style={{ color: "#FA58A6" }}>
                       {row.protein}
                     </Link>
