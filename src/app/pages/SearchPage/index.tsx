@@ -140,7 +140,7 @@ export default function SearchPage() {
   return (
     <Box
       sx={{
-        marginTop: { sm: "104px", xs: "67px" },
+        marginTop: {sm: "112px", xs: "67px" },
         paddingTop: { sm: "78px", xs: "10px" },
         // maxWidth: "45%"
       }}
