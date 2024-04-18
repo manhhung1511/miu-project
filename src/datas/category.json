@@ -10,8 +10,29 @@
         "status": "Tẩy trang"
     },
     {
+        "id": "22",
+        "name": "Nước Tẩy Trang Innisfree Green Tea Purifying",
+        "price": "465.000đ",
+        "image": "https://i.postimg.cc/8C3GCbmf/Rectangle-85-1.png",
+        "category": "10",
+        "status": "Tẩy trang",
+        "number": "29",
+        "type": "500ml",
+        "discount": "0%"
+    },
+    {
         "id": "12",
         "image": "https://i.postimg.cc/13K3cwwV/Image-9.png",
+        "name": "Sữa rửa mặt Bioderma Solution Micellaire",
+        "price": "320.000đ",
+        "number": "52",
+        "type": "500ml",
+        "discount": "0%",
+        "status": "Sữa rửa mặt"
+    },
+    {
+        "id": "22",
+        "image": "https://i.postimg.cc/KYkyGNBm/Rectangle-85-23.png",
         "name": "Sữa rửa mặt Bioderma Solution Micellaire",
         "price": "320.000đ",
         "number": "52",

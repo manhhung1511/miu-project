@@ -23,7 +23,7 @@ export default function LoginPageAdmin() {
   const navigateTo = useNavigate();
 
   const handleSubmit = async () => {
-    navigateTo("/admin/dashboard", { replace: true });
+    navigateTo("/admin", { replace: true });
   };
 
   const INITIAL_FORM_STATE = {

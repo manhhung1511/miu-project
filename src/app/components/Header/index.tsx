@@ -38,6 +38,7 @@ function Header() {
     "/news": `Tin tức`,
     "/introduce": `Giới thiệu`,
     "/contact": `Liên hệ`,
+    '/admin/login': `admin`
   };
 
   const navItems1 = {
@@ -45,8 +46,7 @@ function Header() {
     "/category": `Danh mục sản phẩm`,
     "/news": `Tin tức`,
     "/introduce": `Giới thiệu`,
-    "/contact": `Liên hệ`,
-  };
+    "/contact": `Liên hệ`  };
 
   React.useEffect(() => {
     const allLike = JSON.parse(localStorage.getItem("cart") || "[]");

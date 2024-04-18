@@ -1,0 +1,27 @@
+[
+    {
+        "id": "#4152",
+        "name": "NGuyễn Văn Mạnh",
+        "number": "0945626654",
+        "email": "nguyenhung123@gmail.com",
+        "chucvu": "Nhân viên bán hàng",
+        "status": "1"
+    },
+    {
+        "id": "#4152",
+        "name": "Trang Anh",
+        "number": "0153636134",
+        "email": "tranganh@gmail.com",
+        "chucvu": "Nhân viên thu ngân",
+        "status": "0"
+    },
+    {
+        "id": "#4152",
+        "name": "Trang Anh",
+        "number": "0845615415",
+        "email": "tunguyen@gmail.com",
+        "chucvu": "Nhân viên kiểm kho",
+        "status": "0"
+    }
+    
+]
