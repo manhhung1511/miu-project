@@ -239,7 +239,6 @@ export default function DetailNewPage() {
                 fontWeight: "500",
                 color: "#FA58A6",
                 textAlign: 'center',
-                padding: "30px 0 10px 0"
               }}
             >
              ĐIỂM NỔI BẬT CỦA SẢN PHẨM
@@ -315,7 +314,6 @@ export default function DetailNewPage() {
                 fontWeight: "500",
                 color: "#FA58A6",
                 textAlign: 'center',
-                padding: "30px 0 10px 0"
               }}
             >
                            CÔNG THỨC THÀNH PHẦN TẬP TRUNG
